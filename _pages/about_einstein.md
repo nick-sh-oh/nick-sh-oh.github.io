@@ -1,5 +1,7 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi there! I'm Nick Seungheon Oh - a **social scientist fascinated by the intersection of artificial intelligence and the social sciences**. My research explores how AI can enhance the work of social scientists in explaining complex real-world phenomena. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I'm particularly interested in pioneering methods that leverage AI techniques like natural language processing and deep learning to uncover insights in data that are invisible to human analysis alone. My goal is to develop interpretable AI models that don't just predict outcomes, but also elucidate the underlying *hows* and *whys* that drive socio-political-economic events. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+After studying Politics and Economics at the [London School of Economics and Political Science](https://www.lse.ac.uk/), I started my career as a junior NLP engineer at a hedge fund. I now lead the development of open-source AI models and toolkits as Principal Researcher at [socius](https://www.socius.org/) to empower social scientists with optimized resources for analyzing socio-politico-economic data.
+
+I believe the future of social science lies in thoughtfully harnessing the strengths of both human and artificial intelligence. Please feel free to reach out if you ever want to chat more about the fascinating intersections between the two!
