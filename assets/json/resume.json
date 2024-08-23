@@ -91,8 +91,8 @@
     {
       "name": "sentibank: A Unified Resource of Sentiment Lexicons and Dictionaries",
       "publisher": "International AAAI Conference on Web and Social Media",
-      "releaseDate": "2024 (forthcoming)",
-      "url": "",
+      "releaseDate": "2024",
+      "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/31443",
       "summary": "Sentiment analysis is critical across computational social science domains, but faces challenges in interpretability. Rule-based methods relying on expert lexicons enable transparency, yet applying them is hindered by resource fragmentation and lack of validation. This paper introduces sentibank, a large-scale unified database consolidating 15 original sentiment dictionaries and 43 preprocessed dictionaries, spanning 7 genres and 6 domains."
     }
   ],
@@ -136,7 +136,6 @@
       "summary": "Open-source Python toolkit designed to simplify the process of collecting and archiving Reddit data for research purposes",
       "highlights": ["Reddit Data Collection", "Research Data Toolkit", "Research Data Pipeline", "Reddit Data API", "Data Crawler"],
       "startDate": "2023-12-15",
-      // "endDate": ,
       "url": "https://github.com/socius-org/RedditHarbor"
     }
   ]
