@@ -31,13 +31,15 @@ Recent weeks, I've noticed a dialogue surrounding Leopold Aschenbrenner's Situat
 
 The freelance market, often a bellwether for economic shifts, offered surprising insights. [Upwork reported a growth in sectors most susceptible to automation](https://www.upwork.com/research/generative-ai-work-value). While writing and translation declined, video production surged by 40%, and web/graphic design grew 8-10%. Counter-intuitively, the most "at-risk" occupations are thriving.
 
-Why? Because AI isn't replacing these roles – it's augmenting them. Professionals can now deliver higher-quality work more efficiently. Generative AI's text and image output itself lack intrinsic meaning but become valuable when expertly integrated into larger products or services. This efficiency extends across industries, with AI agents like Devin showing promise in automating complex software engineering tasks.
-
+Why? Because AI isn't replacing these roles – it's augmenting them. Professionals can now deliver higher-quality work more efficiently. Generative AI's text and image output itself lack intrinsic meaning but become valuable when expertly integrated into larger products or services. This efficiency extends across industries, with AI agents like [Devin](https://www.cognition.ai/blog/introducing-devin) showing promise in automating complex software engineering tasks.
+<!-- 
 <div class="row justify-content-center">
     <div class="col-md-10 mt-3">
         {% include video.liquid path="https://www.youtube.com/embed/fjHtjT7GO1c?si=613_exeRYEabrYHo" class="rounded z-depth-1" %}
     </div>
-</div>
+</div> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fjHtjT7GO1c?si=k3do5ZkhgX5lzlMO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## The Augmentation Effect
 
