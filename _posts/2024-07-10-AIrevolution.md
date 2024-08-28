@@ -33,8 +33,8 @@ The freelance market, often a bellwether for economic shifts, offered surprising
 
 Why? Because AI isn't replacing these roles – it's augmenting them. Professionals can now deliver higher-quality work more efficiently. Generative AI's text and image output itself lack intrinsic meaning but become valuable when expertly integrated into larger products or services. This efficiency extends across industries, with AI agents like Devin showing promise in automating complex software engineering tasks.
 
-<div class="row mt-3 justify-content-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-md-10 mt-3">
         {% include video.liquid path="https://www.youtube.com/embed/fjHtjT7GO1c?si=613_exeRYEabrYHo" class="rounded z-depth-1" %}
     </div>
 </div>
