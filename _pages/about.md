@@ -6,7 +6,7 @@ subtitle: Principal Researcher @ <a href="https://www.socius.org/">socius</a>
 
 profile:
   align: right
-  image: profile_picture.jpg
+  image: profile_picture_b2c.jpg
   image_circular: false # crops the image to make it circular
   more_info: false
 
