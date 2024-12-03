@@ -111,8 +111,8 @@ The spiral wave betwixt the figures represents System 1.5's dynamic role in medi
             </div>
             
             <!-- The Image - Always Visible -->
-            <div class="text-center mb-3">
-                <img src="assets/img/blog/personal_journey/market_event.jpg" alt="Market Duality Visualization" class="img-fluid rounded"/>
+            <div class="col-12 mt-3 mt-md-0">
+                {% include figure.liquid path="assets/img/blog/personal_journey/market_event.jpg" class="img-fluid w-100 rounded z-depth-1" %}
             </div>
 
             <!-- Collapsible Technical Details -->
