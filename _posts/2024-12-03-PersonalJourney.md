@@ -68,32 +68,33 @@ The Dance of Intuition and Analysis: System 1.5 as Mediator
 The spiral wave betwixt the figures represents System 1.5's dynamic role in mediating between intuitive System 1 (left, in scarlet) and analytical System 2 (right, in azure). The flowing element symbolises the continuous interplay between swift, instinctive thinking and deliberative reasoning.  -->
 
 
-<div style="font-family: 'Courier New', monospace; border: 2px solid #FFB400; padding: 15px; background-color: #000033; color: #FFB400;">
-    <div style="text-align: center; border-bottom: 1px solid #FFB400; margin-bottom: 10px;">
-        ◄◄ MARKET DUALITY ►► <br/>
+<div style="font-family: 'Courier New', monospace; padding: 20px; background-color: #000033; box-shadow: 0 0 10px rgba(255, 180, 0, 0.5); border-radius: 5px;">
+    <div style="text-align: center; border-bottom: 2px solid #FFB400; margin-bottom: 15px; color: #FFB400;">
+        ◄◄ MARKET DUALITY ►►<br/>
         A Tale of Numbers and Human Nature
     </div>
-    {<br/>
-    &nbsp;&nbsp;"market_model": {<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;"left_hemisphere": {<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "<em>quantitative analytics</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"components": [<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>modeling</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>graphs</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>equations</em>"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;"right_hemisphere": {<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "<em>human behaviour</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"components": [<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>ideologies</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>interests</em>",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<em>institutions</em>"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;"central_display": "<em>integrated market visualization</em>"<br/>
-    &nbsp;&nbsp;}<br/>
-    }<br/>
-    ----------------------------------<br/>
-    RENDERING: The split-screen visualisation presents a market event through complementary lenses - mathematical models and formulae on the left mirror institutional and human factors on the right. At the center lies the marketplace itself, bustling with activity, where these two realms of understanding converge to shape market outcomes. This duality represents how markets emerge from the interplay between quantitative precision and human behaviour.
+    <pre style="color: orange; margin: 0;"><code>{
+  "market_model": {
+    "left_hemisphere": {
+      "type": "<span style="color: #99FF99;">quantitative analytics</span>",
+      "components": [
+        "<span style="color: #99FF99;">modeling</span>",
+        "<span style="color: #99FF99;">graphs</span>",
+        "<span style="color: #99FF99;">equations</span>"
+      ]
+    },
+    "right_hemisphere": {
+      "type": "<span style="color: #99FF99;">human behaviour</span>",
+      "components": [
+        "<span style="color: #99FF99;">ideologies</span>",
+        "<span style="color: #99FF99;">interests</span>",
+        "<span style="color: #99FF99;">institutions</span>"
+      ]
+    },
+    "central_display": "<span style="color: #99FF99;">integrated market visualization</span>"
+  }
+}</code></pre>
+    <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
+        RENDERING: The split-screen visualisation presents a market event through complementary lenses - mathematical models and formulae on the left mirror institutional and human factors on the right. At the center lies the marketplace itself, bustling with activity, where these two realms of understanding converge to shape market outcomes. This duality represents how markets emerge from the interplay between quantitative precision and human behaviour.
+    </div>
 </div>
