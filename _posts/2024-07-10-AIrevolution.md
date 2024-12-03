@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The AI Revolution - Augmentation, Not Replacement
-date: 2024-07-10 16:00:00
+date: 2024-07-10
 description: In this piece I discuss, despite media anxiety, frontline industries show AI augmenting rather than replacing jobs, with unexpected growth in "at-risk" sectors.
 tags: AI FutureOfWork AIAugmentation WorkforceEvolution
 categories: article

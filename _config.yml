@@ -123,7 +123,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Serendipitous Synapses # blog_name will be displayed in your blog page
-blog_description: Where random thoughts collide and occasionally make sense
+blog_description: Where random thoughts collide<br> and occasionally make sense
 permalink: /blog/:year/:title/
 
 # Pagination

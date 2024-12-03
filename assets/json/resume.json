@@ -21,7 +21,7 @@
       "url": "https://numencapital.com/",
       "startDate": "2021-09",
       "endDate": "2023-01",
-      "summary": "Worked on the in-house Knowsis research team, leveraging NLP and machine learning for alternative data insights. \n* Developed NLP pipelines for alternative data insights, including ESG tweet classifier based on transformer architecture (97% accuracy), rule-based sentiment analyser, and domain-specific dictionary. \n *Analysed alternative data signals derived from NLP pipelines using time series models. This analysis led to accurate forecasts of market movements, directly assisting quantitative investment strategies.",
+      "summary": "Worked on the in-house Knowsis research team, leveraging NLP and machine learning for alternative data insights. (1) Developed NLP pipelines for alternative data insights, including ESG tweet classifier based on transformer architecture (97% accuracy), rule-based sentiment analyser, and domain-specific dictionary. (2) Analysed alternative data signals derived from NLP pipelines using time series models. This analysis led to accurate forecasts of market movements, directly assisting quantitative investment strategies.",
       "highlights": ["NLP"]
     },
     {
@@ -29,7 +29,7 @@
       "position": "Principal Researcher",
       "url": "https://socius.org",
       "startDate": "2023-01",
-      "summary": "socius is an AI research lab endorsed by the London School of Economics creating open-source models and data to empower social scientists. \n* Lead developer of sentibank, a large-scale open database consolidating 15 original and 43 processed sentiment dictionaries spanning diverse genres and domains. This resource empowered social scientists with tailored lexicons to conduct more insightful sentiment analysis. \n* Developed RedditHarbor, a toolkit enabling easy large-scale collection of Reddit data. Storing the data in Supabase made it conveniently accessible to researchers. This resource expanded social scientists' data sources for quantitative and qualitative analysis. \n* Architected Sentium, an interpretable rule-based sentiment analysis model with state-of-the-art performance on social science text. The model's explainability helps researchers derive impactful insights from sentiment analysis.",
+      "summary": "socius is an independent research lab endorsed by the London School of Economics and Political Science. The lab is rooted in social science principles, believing that AI development and deployment must be guided by robust theories and philosophies. We create tools and frameworks that both technical and social science researchers can confidently use and interpret.",
       "highlights": ["NLP"]
     }
   ],

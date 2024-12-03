@@ -1,9 +1,9 @@
 ---
 layout: post
 title: From Markets to Minds - My Personal Journey as a Researcher
-date: 2024-12-03 14:00:00
+date: 2024-12-03
 description: My personal journey from studying politics and economics to founding an AI research lab.
-tags: PersonalJourney socius 
+tags: PersonalJourney socius Philosophy
 categories: article
 thumbnail: assets/img/blog/personal_journey/market_event.jpg
 featured: true
