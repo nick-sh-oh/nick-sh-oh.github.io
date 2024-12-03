@@ -135,7 +135,7 @@ This led to my research collaboration with [Prof Fernand Gobet](https://en.wikip
             
             <!-- The Image - Always Visible -->
             <div class="col-12 mt-3 mt-md-0">
-                {% include figure.liquid path="assets/img/blog/personal_journey/system_1_5.jpg" class="img-fluid w-100 rounded z-depth-1" %}
+                {% include figure.liquid path="assets/img/blog/personal_journey/system1_5.jpg" class="img-fluid w-100 rounded z-depth-1" %}
             </div>
 
             <!-- Collapsible Technical Details -->
