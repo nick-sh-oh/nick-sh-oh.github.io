@@ -98,7 +98,7 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
             <!-- Collapsible Technical Details -->
             <details class="mb-3">
                 <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
-                    Technical Details ▼
+                    Technical Details
                 </summary>
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
@@ -111,7 +111,7 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
   }
 }</code></pre>
                     <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
-                        RENDERING: This formal portrait depicts the classical distinction between System 1 and System 2 thinking. The mathematical diagrams between the figures emphasise the relationship between intuitive and analytical processing, whilst the unified landscape suggests their operation within a single cognitive framework.
+                        RENDERING: This portrait depicts the classical distinction between System 1 and System 2 thinking. The mathematical diagrams between the figures emphasise the relationship between intuitive and analytical processing, whilst the unified landscape suggests their operation within a single cognitive framework.
                     </div>
                 </div>
             </details>
@@ -135,13 +135,13 @@ This led to my research collaboration with [Prof Fernand Gobet](https://en.wikip
             
             <!-- The Image - Always Visible -->
             <div class="col-12 mt-3 mt-md-0">
-                {% include figure.liquid path="assets/img/blog/personal_journey/system_1.5.jpg" class="img-fluid w-100 rounded z-depth-1" %}
+                {% include figure.liquid path="assets/img/blog/personal_journey/system_1_5.jpg" class="img-fluid w-100 rounded z-depth-1" %}
             </div>
 
             <!-- Collapsible Technical Details -->
             <details class="mb-3">
                 <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
-                    Technical Details ▼
+                    Technical Details
                 </summary>
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
