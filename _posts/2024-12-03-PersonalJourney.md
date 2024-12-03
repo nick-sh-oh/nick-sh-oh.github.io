@@ -98,3 +98,55 @@ The spiral wave betwixt the figures represents System 1.5's dynamic role in medi
         RENDERING: The split-screen visualisation presents a market event through complementary lenses - mathematical models and formulae on the left mirror institutional and human factors on the right. At the center lies the marketplace itself, bustling with activity, where these two realms of understanding converge to shape market outcomes. This duality represents how markets emerge from the interplay between quantitative precision and human behaviour.
     </div>
 </div>
+
+<div class="row mt-3">
+    <div class="col-12">
+        <div style="font-family: 'Courier New', monospace; padding: 0; background-color: #000033;">
+            <!-- Header Bar - Always Visible -->
+            <div style="border-top: 2px solid #FFB400; border-bottom: 2px solid #FFB400; padding: 10px 0; margin-bottom: 15px; text-align: center;">
+                <h5 style="color: #FFB400; margin: 0;">
+                    ◄◄ MARKET DUALITY ►►<br/>
+                    <small>A Tale of Numbers and Human Nature</small>
+                </h5>
+            </div>
+            
+            <!-- The Image - Always Visible -->
+            <div class="text-center mb-3">
+                <img src="assets/img/blog/personal_journey/market_event.jpg" alt="Market Duality Visualization" class="img-fluid rounded"/>
+            </div>
+
+            <!-- Collapsible Technical Details -->
+            <details class="mb-3">
+                <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
+                    Technical Details ▼
+                </summary>
+                <div style="padding: 20px;">
+                    <pre style="color: orange; margin: 0;"><code>{
+  "market_model": {
+    "left_hemisphere": {
+      "type": "<span style="color: #99FF99;">quantitative analytics</span>",
+      "components": [
+        "<span style="color: #99FF99;">modeling</span>",
+        "<span style="color: #99FF99;">graphs</span>",
+        "<span style="color: #99FF99;">equations</span>"
+      ]
+    },
+    "right_hemisphere": {
+      "type": "<span style="color: #99FF99;">human behaviour</span>",
+      "components": [
+        "<span style="color: #99FF99;">ideologies</span>",
+        "<span style="color: #99FF99;">interests</span>",
+        "<span style="color: #99FF99;">institutions</span>"
+      ]
+    },
+    "central_display": "<span style="color: #99FF99;">integrated market visualization</span>"
+  }
+}</code></pre>
+                    <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
+                        RENDERING: The split-screen visualisation presents a market event through complementary lenses - mathematical models and formulae on the left mirror institutional and human factors on the right. At the center lies the marketplace itself, bustling with activity, where these two realms of understanding converge to shape market outcomes. This duality represents how markets emerge from the interplay between quantitative precision and human behaviour.
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+</div>
