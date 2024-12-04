@@ -9,3 +9,5 @@ _site
 Gemfile.lock
 node_modules/
 vendor
+
+_posts/2024-12-04-FoundationalAI.md
