@@ -11,7 +11,7 @@ featured: true
 
 I'm a researcher with an unconventional background - a BSc in Politics and Economics who now focus on researching researches AI systems. Here's my personal journey as a researcher, with its unexpected turns and serendipitous discoveries that shaped my approach to artificial intelligence.
 
-It's 2020, and I'm nestled in a quiet corner on the second floor of the LSE library, surrounded by papers about the 2008 financial crisis. [Professor Schonhardt-Bailey](https://en.wikipedia.org/wiki/Cheryl_Schonhardt-Bailey)’s GV309 course, *Politics of Money and Finance in Comparative Perspective*, had led me down a fascinating rabbit hole. Until then, most of my Economics courses had been a parade of numbers, graphs, and equations. But GV309 revealed a different story – one of institutions, ideas, and human interests shaping financial decisions. That contrast sparked something in me. The same market event could look entirely different depending on whether you focused on the mathematical models or the human elements driving them. (In hindsight, perhaps I should have enrolled in behavioural economics - it might have shown me this duality sooner.)
+It's 2020, and I'm nestled in a quiet corner on the second floor of the LSE library, surrounded by papers about the 2008 financial crisis. [Prof. Schonhardt-Bailey](https://en.wikipedia.org/wiki/Cheryl_Schonhardt-Bailey)’s GV309 course, *Politics of Money and Finance in Comparative Perspective*, had led me down a fascinating rabbit hole. Until then, most of my Economics courses had been a parade of numbers, graphs, and equations. But GV309 revealed a different story – one of institutions, ideas, and human interests shaping financial decisions. That contrast sparked something in me. The same market event could look entirely different depending on whether you focused on the mathematical models or the human elements driving them. (In hindsight, perhaps I should have enrolled in behavioural economics - it might have shown me this duality sooner.)
 
 <div class="row mt-3">
     <div class="col-12">
@@ -32,7 +32,7 @@ It's 2020, and I'm nestled in a quiet corner on the second floor of the LSE libr
             <!-- Collapsible Technical Details -->
             <details class="mb-3">
                 <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
-                    Technical Details
+                    caption
                 </summary>
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
@@ -65,7 +65,7 @@ It's 2020, and I'm nestled in a quiet corner on the second floor of the LSE libr
     </div>
 </div>
 
-After graduating from LSE, I was offered a role as a Junior NLP Engineer at [Numen Capital](https://numencapital.com/) - a stroke of fortune and timing for someone without a Computer Science degree. Working on the Knowsis research team, I was building NLP pipelines and transformer-based classifiers to analyse market sentiment on ESG. While our classifier boasted an impressive 97% accuracy, what truly fascinated me was a more fundamental question: why did we need sentiment analysis at all? If markets were purely rational, why would sentiment matter? Yet there I was, developing rule-based sentiment analysers and domain-specific dictionaries because market movements weren't just about numbers – they were about human psychology, emotions, and sometimes deeply irrational behaviour. This curiosity about the human elements behind market movements would later become one of the founding principles of [socius](https://socius.org/). 
+After graduating from LSE, I was offered a role as a Junior NLP Engineer at [Numen Capital](https://numencapital.com/) - a stroke of fortune and timing for someone without a Computer Science degree. Working on the Knowsis research team, I was building NLP pipelines and transformer-based classifiers to analyse market sentiment on ESG. While our classifier boasted an impressive 97% accuracy, what truly fascinated me was a more fundamental question: why did we need sentiment analysis at all? If markets were purely rational, why would sentiment matter? Yet there I was, developing rule-based sentiment analysers and domain-specific dictionaries because market movements weren't just about numbers – they were about human psychology, emotions, and sometimes deeply irrational behaviour. This curiosity about the foundational elements behind market movements would later become one of the founding principles of [socius](https://socius.org/). 
 
 During my time at Numen, I began noticing something curious about how we study sentiment in text. Everyone was rushing to build bigger, more complex models, but they were missing something fundamental: What exactly is sentiment? How do we humans understand and process emotions in the first place? This wasn't just academic curiosity anymore - it was becoming clear that if we're going to build AI systems that understand human emotions, we should first understand how we ourselves process them.
 
@@ -98,7 +98,7 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
             <!-- Collapsible Technical Details -->
             <details class="mb-3">
                 <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
-                    Technical Details
+                    caption
                 </summary>
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
@@ -120,7 +120,7 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
 </div>
 
 
-This led to my research collaboration with [Prof Fernand Gobet](https://en.wikipedia.org/wiki/Fernand_Gobet). Working together on [System 1.5](https://neurips.cc/virtual/2024/104306), we examined how expert cognition could inform AI development. Just as social sciences seek to explain phenomena through multiple levels of analysis, we proposed a framework that mirrors how human experts navigate between intuitive and analytical thinking. This wasn't just about building faster or more accurate systems - it was about creating AI that processes information in ways we can naturally understand and explain, reflecting our philosophy that AI development must balance theory-driven approaches with multi-scale analysis.
+This led to my research collaboration with [Prof. Fernand Gobet](https://en.wikipedia.org/wiki/Fernand_Gobet). Working together on [System 1.5](https://neurips.cc/virtual/2024/104306), we examined how expert cognition could inform AI development. Just as social sciences seek to explain phenomena through multiple levels of analysis, we proposed a framework that mirrors how human experts navigate between intuitive and analytical thinking. This wasn't just about building faster or more accurate systems - it was about creating AI that processes information in ways we can naturally understand and explain, reflecting our philosophy that AI development must balance theory-driven approaches with multi-scale analysis.
 
 <div class="row mt-3">
     <div class="col-12">
@@ -141,7 +141,7 @@ This led to my research collaboration with [Prof Fernand Gobet](https://en.wikip
             <!-- Collapsible Technical Details -->
             <details class="mb-3">
                 <summary style="color: #FFB400; cursor: pointer; padding: 10px; border-top: 1px solid #FFB400;">
-                    Technical Details
+                    caption
                 </summary>
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{

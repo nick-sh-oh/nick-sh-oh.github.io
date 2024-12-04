@@ -30,6 +30,4 @@ Today, as researcher at [socius](https://socius.org/), I examine artificial inte
 
 To support social scientists in their research, I develop open-source Python libraries that make data more accessible. These include [sentibank](https://github.com/socius-org/sentibank), which provides theory-driven sentiment analysis capabilities, and [RedditHarbor](https://github.com/socius-org/RedditHarbor), which streamlines social media data collection - enabling researchers to focus on understanding phenomena rather than technical implementation.
 
-I believe the future of AI lies not just in improving performance metrics, but in creating systems that think in ways we can naturally understand and trust. My research aims to bridge the gap between technical excellence and human comprehension, working toward AI systems that enhance rather than mystify our understanding of complex phenomena.
-
-Please feel free to reach out if you ever want to chat more about the fascinating intersections between the two!
+I believe the future of AI lies not merely in optimising performance metrics, but in developing systems grounded in robust theoretical and philosophical foundations.
