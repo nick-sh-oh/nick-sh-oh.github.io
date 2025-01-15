@@ -29,5 +29,3 @@ Today, as researcher at [socius](https://socius.org/), I focus on establishing s
 * Mechanistic Foundation: I’m currently exploring how fundamental computational principles emerge in artificial neural networks through the lens of renormalisation theory, exploring parallels between physical systems and deep learning architectures to better understand how AI systems learn and generalise.
 
 Additionally, to support social scientists in their research, I develop open-source Python libraries that make data more accessible. These include [sentibank](https://github.com/socius-org/sentibank), which provides theory-driven sentiment analysis capabilities, and [RedditHarbor](https://github.com/socius-org/RedditHarbor), which streamlines social media data collection - enabling researchers to focus on understanding phenomena rather than technical implementation.
-
-I believe the future of AI lies not merely in optimising performance metrics, but in developing systems grounded in robust theoretical and philosophical foundations. If this vision resonates with you, I welcome collaboration opportunities - please don't hesitate to reach out!
