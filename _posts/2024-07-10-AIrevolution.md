@@ -6,7 +6,7 @@ description: In this piece I discuss, despite media anxiety, frontline industrie
 tags: AI FutureOfWork AIAugmentation WorkforceEvolution
 categories: article
 thumbnail: assets/img/blog/ai_revolution/aztec.png
-featured: true
+featured: false
 ---
 
 <div class="row mt-3">
