@@ -4,11 +4,11 @@ My journey from [Politics and Economics](https://www.lse.ac.uk/study-at-lse/unde
 
 Today, as researcher at [socius](https://socius.org/), I examine artificial intelligence across multiple levels of understanding - from how AI systems reflect real-world phenomena, to how we build theoretical frameworks bridging machine and human cognition, to how individual components work together to create intelligent behaviour.
 
-* Theoretical Understanding: Developing [System 1.5](https://nips.cc/virtual/2024/104306), a framework that bridges human and machine cognition by regulating the interplay between intuitive (System 1) and analytical (System 2) processing in artificial intelligence. This work draws inspiration from how human experts navigate between quick pattern recognition and deliberate analysis.
+- Theoretical Understanding: Developing [System 1.5](https://nips.cc/virtual/2024/104306), a framework that bridges human and machine cognition by regulating the interplay between intuitive (System 1) and analytical (System 2) processing in artificial intelligence. This work draws inspiration from how human experts navigate between quick pattern recognition and deliberate analysis.
 
-* Phenomenological Understanding: Proposing [Computational Interpretabilism](https://nips.cc/virtual/2024/99151), a philosophical framework that establishes how post-hoc explanations from AI systems can generate valid scientific insights. This work provides epistemological foundations for using explainable AI in scientific discovery.
+- Phenomenological Understanding: Proposing [Computational Interpretabilism](https://nips.cc/virtual/2024/99151), a philosophical framework that establishes how post-hoc explanations from AI systems can generate valid scientific insights. This work provides epistemological foundations for using explainable AI in scientific discovery.
 
-* Mechanistic Understanding: I’m currently exploring how fundamental computational principles emerge in artificial neural networks through the lens of renormalisation theory, exploring parallels between physical systems and deep learning architectures to better understand how AI systems learn and generalise.
+- Mechanistic Understanding: I’m currently exploring how fundamental computational principles emerge in artificial neural networks through the lens of renormalisation theory, exploring parallels between physical systems and deep learning architectures to better understand how AI systems learn and generalise.
 
 To support social scientists in their research, I develop open-source Python libraries that make data more accessible. These include [sentibank](https://github.com/socius-org/sentibank), which provides theory-driven sentiment analysis capabilities, and [RedditHarbor](https://github.com/socius-org/RedditHarbor), which streamlines social media data collection - enabling researchers to focus on understanding phenomena rather than technical implementation.
 
