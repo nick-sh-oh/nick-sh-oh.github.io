@@ -99,7 +99,7 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
             
             <!-- The Image - Always Visible -->
             <div class="col-12 mt-3 mt-md-0">
-                {% include figure.liquid path="assets/img/blog/personal_journey/system1:2.jpg" class="img-fluid w-100 rounded z-depth-1" %}
+                {% include figure.liquid path="assets/img/blog/personal_journey/system1_2.jpg" class="img-fluid w-100 rounded z-depth-1" %}
             </div>
 
             <!-- Collapsible Technical Details -->
