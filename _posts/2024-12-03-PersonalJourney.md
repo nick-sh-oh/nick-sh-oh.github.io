@@ -37,25 +37,25 @@ It's 2020, and I'm nestled in a quiet corner on the second floor of the LSE libr
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
 
-"market_model": {
-"left_hemisphere": {
-"type": "<span style="color: #99FF99;">quantitative analytics</span>",
-"components": [
-"<span style="color: #99FF99;">modeling</span>",
-"<span style="color: #99FF99;">graphs</span>",
-"<span style="color: #99FF99;">equations</span>"
-]
-},
-"right_hemisphere": {
-"type": "<span style="color: #99FF99;">human behaviour</span>",
-"components": [
-"<span style="color: #99FF99;">ideologies</span>",
-"<span style="color: #99FF99;">interests</span>",
-"<span style="color: #99FF99;">institutions</span>"
-]
-},
-"central_display": "<span style="color: #99FF99;">integrated market visualisation</span>"
-}
+  "market_model": {
+    "left_hemisphere": {
+      "type": "<span style="color: #99FF99;">quantitative analytics</span>",
+      "components": [
+        "<span style="color: #99FF99;">modeling</span>",
+        "<span style="color: #99FF99;">graphs</span>",
+        "<span style="color: #99FF99;">equations</span>"
+      ]
+    },
+    "right_hemisphere": {
+      "type": "<span style="color: #99FF99;">human behaviour</span>",
+      "components": [
+        "<span style="color: #99FF99;">ideologies</span>",
+        "<span style="color: #99FF99;">interests</span>",
+        "<span style="color: #99FF99;">institutions</span>"
+      ]
+    },
+    "central_display": "<span style="color: #99FF99;">integrated market visualisation</span>"
+  }
 }</code></pre>
 
 <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
@@ -110,13 +110,13 @@ I still remember the day I first read about System 1 and System 2 thinking. It w
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
 
-"cognitive_framework": {
-"processors": {
-"left_unit": "<span style="color: #99FF99;">System-1</span>",
-"right_unit": "<span style="color: #99FF99;">System-2</span>"
-},
-"theorists": "<span style="color: #99FF99;">Daniel Kahneman, Jonathan St B. T. Evans</span>"
-}
+  "cognitive_framework": {
+    "processors": {
+      "left_unit": "<span style="color: #99FF99;">System-1</span>",
+      "right_unit": "<span style="color: #99FF99;">System-2</span>"
+    },
+    "theorists": "<span style="color: #99FF99;">Daniel Kahneman, Jonathan St B. T. Evans</span>"
+  }
 }</code></pre>
 
 <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
@@ -155,22 +155,22 @@ This led to my research collaboration with [Prof. Fernand Gobet](https://en.wiki
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
 
-"cognitive_interface": {
-"left_entity": {
-"type": "<span style="color: #99FF99;">System 1</span>",
-"attributes": "<span style="color: #99FF99;">rapid response core</span>",
-"signature": "<span style="color: #99FF99;">scarlet energetic stance</span>"
-},
-"mediator": {
-"type": "<span style="color: #99FF99;">System 1.5</span>",
-"function": "<span style="color: #99FF99;">metacognitive regulation</span>"
-},
-"right_entity": {
-"type": "<span style="color: #99FF99;">System 2</span>",
-"attributes": "<span style="color: #99FF99;">analytical processing unit</span>",
-"signature": "<span style="color: #99FF99;">azure contemplative stance</span>"
-}
-}
+  "cognitive_interface": {
+    "left_entity": {
+      "type": "<span style="color: #99FF99;">System 1</span>",
+      "attributes": "<span style="color: #99FF99;">rapid response core</span>",
+      "signature": "<span style="color: #99FF99;">scarlet energetic stance</span>"
+    },
+    "mediator": {
+      "type": "<span style="color: #99FF99;">System 1.5</span>",
+      "function": "<span style="color: #99FF99;">metacognitive regulation</span>"
+    },
+    "right_entity": {
+      "type": "<span style="color: #99FF99;">System 2</span>",
+      "attributes": "<span style="color: #99FF99;">analytical processing unit</span>",
+      "signature": "<span style="color: #99FF99;">azure contemplative stance</span>"
+    }
+  }
 }</code></pre>
 
 <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">

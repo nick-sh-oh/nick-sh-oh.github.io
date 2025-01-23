@@ -45,22 +45,22 @@ Consider the difference between building a tower and understanding architecture.
                 <div style="padding: 20px;">
                     <pre style="color: orange; margin: 0;"><code>{
 
-"architectural_metaphor": {
-"scale_driven": {
-"type": "<span style="color: #99FF99;">vertical_scaling</span>",
-"characteristics": [
-"<span style="color: #99FF99;">magnitude</span>",
-"<span style="color: #99FF99;">engineering</span>"
-]
-},
-"principle_driven": {
-"type": "<span style="color: #99FF99;">theoretical_design</span>",
-"principles": [
-"<span style="color: #99FF99;">foundations</span>",
-"<span style="color: #99FF99;">principles</span>"
-]
-}
-}
+  "architectural_metaphor": {
+    "scale_driven": {
+      "type": "<span style="color: #99FF99;">vertical_scaling</span>",
+      "characteristics": [
+        "<span style="color: #99FF99;">magnitude</span>",
+        "<span style="color: #99FF99;">engineering</span>"
+      ]
+    },
+    "principle_driven": {
+      "type": "<span style="color: #99FF99;">theoretical_design</span>",
+      "principles": [
+        "<span style="color: #99FF99;">foundations</span>",
+        "<span style="color: #99FF99;">principles</span>"
+      ]
+    }
+  }
 }</code></pre>
 
 <div style="border-top: 1px solid #FFB400; margin-top: 15px; padding-top: 15px; color: #FFB400;">
