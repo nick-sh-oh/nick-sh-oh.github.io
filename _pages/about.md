@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Researcher @ <a href="https://www.socius.org/">socius</a>
+subtitle: Researcher @ <a href="https://www.socius.org/">socius labs</a>: Experimental Intelligence Lab
 
 profile:
   align: right
@@ -16,16 +16,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi there! I’m Nick (Seungheon) Oh - a researcher working at the intersection of artificial intelligence and human understanding. My work focuses on how we might conceptualise, build, and justify artificial intelligence in ways that advance our understanding at multiple levels - from technical mechanisms to cognitively plausible frameworks.
+Hi there! I’m Nick (Seungheon) Oh -- a researcher experimenting at the intersection between every field that ever studied “thinking” and every machine that's trying to “think”. 
 
-My journey from [Politics and Economics](https://www.lse.ac.uk/study-at-lse/undergraduate/degree-programmes-2024/bsc-politics-and-economics) at the [London School of Economics and Political Science](https://www.lse.ac.uk/) to NLP engineering at [Numen Capital](https://numencapital.com/) revealed a fundamental tension in AI development: while deep learning prioritised predictive accuracy (y-hat), my social science training emphasised understanding mechanisms and causation (b-hat). This gap inspired me to found [socius](https://socius.org/) - to bring social science principles of explanation and understanding to AI development.
+Basically I'm interested in two experiments: whether sciences that explained humans can improve machines (not just performance, but how they collaborate with us); and whether machines can test human theories at impossible scales. 
 
-Today, as researcher at [socius](https://socius.org/), I focus on establishing solid theoretical groundwork for artificial intelligence development and deployment - from developing theoretical frameworks that bridge machine and human cognition (e.g., cognitively plausible AI), to justifying how XAI systems can generate scientific insights (e.g., philosophy of science), to analysing how individual components interact to create intelligent behaviour (e.g., mechanistic interpretability).
+After studying Politics and Economics at [LSE](https://www.lse.ac.uk/), I worked as a Junior NLP Engineer at [Numen Capital](https://numencapital.com/) while sketching out [socialscience.ai](https://www.socialscience.ai) -- a project to bring AI tools to social scientists. But building it revealed the more interesting question was the reverse: instead of AI serving social science, what if the disciplines that studied humans could advance machine intelligence? That flip became [socius labs](https://socius.org), now an independent research lab supported by LSE and LSE Generate exploring this convergence.
 
-- Theoretical Foundation: Developing [System 1.5](https://nips.cc/virtual/2024/104306), a framework that bridges human and machine cognition by regulating the interplay between intuitive (System 1) and analytical (System 2) processing in artificial intelligence. This work draws inspiration from how human experts navigate between quick pattern recognition and deliberate analysis.
-
-- Philosophical Foundation: Proposing [Computational Interpretabilism](https://nips.cc/virtual/2024/99151), a philosophical framework that establishes how post-hoc explanations from AI systems can generate justified scientific insights. This work provides epistemological foundations for using explainable AI in scientific discovery.
-
-- Mechanistic Foundation: I’m currently exploring how fundamental computational principles emerge in artificial neural networks through the lens of renormalisation theory, exploring parallels between physical systems and deep learning architectures to better understand how AI systems learn and generalise.
-
-Additionally, to support social scientists in their research, I develop open-source Python libraries that make data more accessible. These include [sentibank](https://github.com/socius-org/sentibank), which provides theory-driven sentiment analysis capabilities, and [RedditHarbor](https://github.com/socius-org/RedditHarbor), which streamlines social media data collection.
+Current ongoing research spans metacognitive architectures for machines (Monitor-Generate-Verify, System 1.5, Before you 〈think〉, monitor), philosophical arguments on why AI's imperfect explanations can still advance knowledge (In Defence of Post-hoc Explainability) and research infrastructures (PETLP, sentibank, RedditHarbor). Increasingly, I'm fascinated by whether machines have subjective "feelings" we can measure, and how AI agent societies might become laboratories where we test different theories. 

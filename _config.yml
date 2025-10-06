@@ -14,7 +14,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: social science, artificial intelligence, nlp, interpretable ai # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: socius_logo.png #🏛️ the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: socius_nick_logo.png #🏛️ the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://nick-sh-oh.github.io # the base hostname & protocol for your site
 baseurl: # Leave blank for root
@@ -274,7 +274,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["XAI", "Mechanistic Interpretability", "Philosophy", "Social Science", "Cognitive Science"] # these tags will be displayed on the front page of your blog
+display_tags: ["AI", "Philosophy", "Social Science", "Cognitive Science", "Mechanistic Interpretability"] # these tags will be displayed on the front page of your blog
 display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
