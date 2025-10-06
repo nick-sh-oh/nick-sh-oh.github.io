@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Researcher @ <a href="https://www.socius.org/">socius labs</a>: Experimental Intelligence Lab"
+subtitle: "Researcher @ &lt;a href=&quot;https://www.socius.org/&quot;&gt;socius labs&lt;/a&gt;: Experimental Intelligence Lab"
 
 profile:
   align: right
