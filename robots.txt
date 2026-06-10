@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://nick-sh-oh.github.io/sitemap.xml
