@@ -2,7 +2,10 @@ export default function CV() {
   return (
     <article className="page cv">
       <div className="cv-header">
-        <h1>curriculum vitae</h1>
+        <div>
+          <h1>Curriculum Vitae</h1>
+          <p className="cv-updated">Last updated December 2025</p>
+        </div>
         <a className="btn" href="/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
           Open / Download PDF ↗
         </a>

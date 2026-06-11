@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import About from './pages/About.jsx';
 import Publications from './pages/Publications.jsx';
+import Exhibitions from './pages/Exhibitions.jsx';
 import CV from './pages/CV.jsx';
 import { ROUTES } from './seo.js';
 
@@ -36,6 +37,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/exhibitions" element={<Exhibitions />} />
         <Route path="/cv" element={<CV />} />
         <Route path="*" element={<About />} />
       </Routes>

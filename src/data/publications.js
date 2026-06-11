@@ -28,6 +28,7 @@ export const publications = [
     year: 2025,
     selected: false,
     links: {
+      Page: 'https://ojs.aaai.org/index.php/AIES/article/view/36685',
       'arXiv': 'https://www.arxiv.org/abs/2508.09232',
       Poster: '/pdf/PETLP_poster.pdf',
     },
@@ -38,7 +39,7 @@ export const publications = [
     title: 'Before you ⟨think⟩, monitor: Implementing Flavell’s Metacognitive Framework in LLMs',
     authors: ['Nick Oh'],
     venueFull:
-      'The First Workshop on the Application of LLM Explainability to Reasoning and Planning at the Conference on Language Modeling (COLM)',
+      'The First Workshop on the Application of LLM Explainability to Reasoning and Planning at the 2nd Conference on Language Modeling (COLM)',
     year: 2025,
     selected: false,
     links: {
@@ -86,13 +87,14 @@ export const publications = [
     title: 'sentibank: A Unified Resource of Sentiment Lexicons and Dictionaries',
     authors: ['Nick Oh'],
     venueFull:
-      'Proceedings of the 18th International AAAI Conference on Web and Social Media (ICWSM), 18, 2003–2013',
+      'Proceedings of the 18th International AAAI Conference on Web and Social Media (ICWSM)',
     year: 2024,
     selected: false,
     links: {
       Page: 'https://ojs.aaai.org/index.php/ICWSM/article/view/31443',
       PDF: '/pdf/sentibank.pdf',
       Poster: '/pdf/sentibank_poster.pdf',
+      GitHub: 'https://github.com/socius-org/sentibank',
     },
   },
 ];

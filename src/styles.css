@@ -1,29 +1,44 @@
+/* Design language mirrored from socius.org (socius-org/socius-website):
+   GeneralSans body + Montagu Slab headings, monochrome warm-gray palette,
+   pill buttons, 20px-rounded media, airy whitespace. Dark mode is our own
+   warm inversion of the same palette (the socius site is light-only). */
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---------- Theme tokens ---------- */
 :root,
 :root[data-theme='light'] {
   --bg: #ffffff;
-  --bg-soft: #f7f7f5;
-  --text: #1f2328;
-  --text-muted: #5b636b;
-  --link: #b31b1b; /* academic crimson accent */
-  --link-hover: #861313;
-  --border: #e6e6e3;
-  --badge-bg: #f0eeea;
-  --badge-text: #4a4a46;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --text: #1c1c1e;
+  --text-muted: #87827d;
+  --hover: #b9b4b0; /* socius link/nav hover gray */
+  --soft: #f1f0ef; /* secondary surfaces, pills, tags */
+  --soft-hover: #cac6c3; /* primary button hover */
+  --border: #e6e4e2;
 }
 
 :root[data-theme='dark'] {
-  --bg: #16181d;
-  --bg-soft: #1e2127;
-  --text: #e6e6e3;
-  --text-muted: #9aa0a6;
-  --link: #ff7b72;
-  --link-hover: #ff9d96;
-  --border: #2c2f36;
-  --badge-bg: #262a31;
-  --badge-text: #c7c7c2;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --bg: #1b1b1b;
+  --text: #f1f0ef;
+  --text-muted: #9b958f;
+  --hover: #b9b4b0;
+  --soft: #2a2826;
+  --soft-hover: #4a4642;
+  --border: #353230;
 }
 
 /* ---------- Base ---------- */
@@ -39,31 +54,41 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'GeneralSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 17px;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Prose links: underlined in text color, warm-gray on hover (socius CustomLink) */
 a {
-  color: var(--link);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
 }
 a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  color: var(--hover);
+  text-decoration: none;
 }
 
+h1,
+h2 {
+  font-family: 'Montagu Slab', serif;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.1;
+}
 h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(34px, 6vw, 46px);
+  margin: 0 0 0.35em;
   letter-spacing: -0.01em;
-  margin: 0 0 0.3em;
 }
 h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 26px;
 }
 
 /* ---------- Layout ---------- */
@@ -73,68 +98,81 @@ h2 {
   min-height: 100vh;
 }
 
+/* Fixed transparent header; pills carry their own background (socius pattern).
+   Hides on scroll-down, returns on scroll-up — see Layout.jsx. */
 .site-header {
-  border-bottom: 1px solid var(--border);
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: saturate(180%) blur(8px);
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+}
+.site-header.header-hidden {
+  transform: translateY(-120%);
 }
 
 .nav {
-  max-width: 760px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0.9rem 1.25rem;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 16px;
+}
+
+.nav-brand,
+.nav-links {
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-brand a {
   color: var(--text);
-  font-weight: 700;
-  font-size: 0.98rem;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
 }
 .nav-brand a:hover {
-  text-decoration: none;
-  color: var(--link);
+  color: var(--hover);
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
+  gap: 24px;
 }
 .nav-links a {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 .nav-links a:hover {
-  color: var(--text);
-  text-decoration: none;
+  color: var(--hover);
 }
 .nav-links a.active {
-  color: var(--link);
-  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-soft);
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 999px;
+  background: var(--soft);
   color: var(--text);
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: opacity 0.2s ease-in-out;
 }
 .theme-toggle:hover {
-  transform: translateY(-1px);
+  opacity: 0.45;
 }
 
 .content {
@@ -142,15 +180,18 @@ h2 {
   width: 100%;
   max-width: 760px;
   margin: 0 auto;
-  padding: 2.6rem 1.25rem 3rem;
+  padding: 120px 24px 72px;
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 13px;
+  font-weight: 500;
   text-align: center;
-  padding: 1.4rem 1.25rem;
+  padding: 32px 24px;
+}
+.site-footer a {
+  color: inherit;
 }
 .footer-sep {
   margin: 0 0.5rem;
@@ -161,18 +202,17 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 32px;
+  margin-bottom: 32px;
 }
 .subtitle {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 18px;
   margin: 0;
 }
 .profile-img {
-  border-radius: 12px;
+  border-radius: 20px;
   object-fit: cover;
-  box-shadow: var(--shadow);
   flex-shrink: 0;
 }
 
@@ -183,28 +223,25 @@ h2 {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  gap: 8px;
+  margin-top: 40px;
 }
 .social-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.4rem 0.8rem;
-  border: 1px solid var(--border);
+  gap: 8px;
+  padding: 8px 14px;
   border-radius: 999px;
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  background: var(--bg-soft);
-  transition: all 0.15s ease;
+  background: var(--soft);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
 }
 .social-link:hover {
-  color: var(--link);
-  border-color: var(--link);
-  text-decoration: none;
-  transform: translateY(-1px);
+  opacity: 0.45;
+  color: var(--text);
 }
 
 /* ---------- Publications ---------- */
@@ -212,15 +249,11 @@ h2 {
   color: var(--text-muted);
 }
 .pub-year-group {
-  margin-top: 1.6rem;
+  margin-top: 40px;
 }
 .pub-year {
-  color: var(--text-muted);
-  font-size: 1rem;
-  font-weight: 600;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 26px;
+  margin: 0 0 8px;
 }
 .pub-list {
   list-style: none;
@@ -229,67 +262,133 @@ h2 {
 }
 .pub {
   display: flex;
-  gap: 1rem;
-  padding: 1.1rem 0;
+  gap: 20px;
+  padding: 24px 0;
   border-bottom: 1px solid var(--border);
+}
+.pub:last-child {
+  border-bottom: none;
 }
 .pub-venue {
   flex-shrink: 0;
-  width: 84px;
-  padding-top: 0.15rem;
+  width: 92px;
+  padding-top: 2px;
 }
 .badge {
   display: inline-block;
-  background: var(--badge-bg);
-  color: var(--badge-text);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.22rem 0.5rem;
-  border-radius: 6px;
+  background: var(--soft);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
   white-space: nowrap;
 }
+/* Venue type colors: blue = conference proceedings, green = workshop papers.
+   Text colors chosen for AA contrast on each background. */
+.badge-conference {
+  background: #3c46ff;
+  color: #ffffff;
+}
+.badge-workshop {
+  background: #51da4c;
+  color: #1c1c1e;
+}
+.badge-exhibition {
+  background: var(--text);
+  color: var(--bg);
+}
 .pub-title {
-  font-size: 1.02rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem;
-  line-height: 1.4;
+  font-family: 'GeneralSans', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  line-height: 1.25;
 }
 .authors {
-  font-size: 0.92rem;
+  font-size: 15px;
   color: var(--text-muted);
 }
 .authors strong {
   color: var(--text);
+  font-weight: 500;
 }
 .pub-venue-full {
-  font-size: 0.85rem;
+  font-size: 14px;
   color: var(--text-muted);
-  font-style: italic;
-  margin-top: 0.2rem;
+  margin-top: 4px;
+}
+.pub-desc {
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 8px 0 0;
 }
 .pub-award {
-  font-size: 0.84rem;
-  color: var(--link);
-  margin-top: 0.35rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 8px;
 }
 .pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.55rem;
+  gap: 8px;
+  margin-top: 12px;
 }
 .pub-links a {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.18rem 0.55rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
 }
 .pub-links a:hover {
-  color: var(--link);
-  border-color: var(--link);
-  text-decoration: none;
+  opacity: 0.45;
+  color: var(--text);
+}
+
+/* ---------- Exhibitions ---------- */
+.exhibit {
+  margin-top: 36px;
+}
+.exhibit-meta {
+  margin-bottom: 12px;
+}
+.exhibit-title {
+  margin: 0 0 6px;
+}
+.awards {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.awards li {
+  font-size: 15px;
+  font-weight: 500;
+}
+.exhibit-figure {
+  margin: 20px 0 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.exhibit-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.exhibit-desc {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 16px 0 0;
+}
+.exhibit .pub-links {
+  margin-top: 16px;
 }
 
 /* ---------- CV ---------- */
@@ -297,60 +396,87 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
+  gap: 16px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
+}
+.cv-updated {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
 }
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--link);
-  border-radius: 8px;
-  color: var(--link);
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn:hover {
-  background: var(--link);
-  color: #fff;
+  background: var(--soft-hover);
+  color: #ffffff;
   text-decoration: none;
 }
 .pdf-frame {
   width: 100%;
   height: 80vh;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  background: var(--bg-soft);
+  background: var(--soft);
 }
 .pdf-frame object {
   display: block;
 }
 .pdf-frame p {
-  padding: 2rem;
+  padding: 32px;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   body {
     font-size: 16px;
+  }
+  .site-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+  .nav {
+    background: var(--bg);
+    border-radius: 20px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-brand,
+  .nav-links {
+    padding: 0;
+    background: transparent;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .content {
+    padding-top: 140px;
   }
   .about-header {
     flex-direction: column-reverse;
     align-items: flex-start;
+    gap: 20px;
   }
   .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
+    width: 132px;
+    height: 132px;
   }
   .pub {
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 8px;
   }
   .pub-venue {
     width: auto;

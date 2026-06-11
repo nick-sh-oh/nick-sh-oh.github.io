@@ -34,20 +34,41 @@ function ThemeToggle() {
   );
 }
 
+// Hide the header when scrolling down, reveal on scroll up (socius.org pattern).
+function useHideOnScroll() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setHidden(y > lastY && y > 100);
+      lastY = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return hidden;
+}
+
 export default function Layout({ children }) {
+  const headerHidden = useHideOnScroll();
+
   return (
     <div className="site">
-      <header className="site-header">
+      <header className={`site-header${headerHidden ? ' header-hidden' : ''}`}>
         <nav className="nav">
           <div className="nav-brand">
             <NavLink to="/">Nick (Seungheon) Oh</NavLink>
           </div>
           <div className="nav-links">
             <NavLink to="/" end>
-              about
+              About
             </NavLink>
-            <NavLink to="/publications">publications</NavLink>
-            <NavLink to="/cv">cv</NavLink>
+            <NavLink to="/publications">Publications</NavLink>
+            <NavLink to="/exhibitions">Exhibitions</NavLink>
+            <NavLink to="/cv">CV</NavLink>
             <ThemeToggle />
           </div>
         </nav>

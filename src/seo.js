@@ -24,6 +24,14 @@ export const ROUTES = [
       'Papers by Nick Oh at NeurIPS, COLM, AIES, and ICWSM — on metacognition in AI systems, post-hoc explainability, privacy-by-design pipelines, and sentiment resources.',
   },
   {
+    path: '/exhibitions',
+    title: 'Exhibitions — Nick (Seungheon) Oh',
+    description:
+      'artefact(s): LeNet-1 — LeCun’s original CNN rebuilt in circuit boards, LEDs, and glass. Spotlighted at the CVPR 2026 Art Gallery and awarded the IEEE TCPAMI Art Award.',
+    image: '/img/artefacts-lenet1.jpg',
+    imageAlt: 'artefact(s): LeNet-1 — violet LED installation in a transparent case at CVPR 2026',
+  },
+  {
     path: '/cv',
     title: 'CV — Nick (Seungheon) Oh',
     description:

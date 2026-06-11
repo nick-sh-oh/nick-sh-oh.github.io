@@ -13,19 +13,24 @@ function Authors({ authors }) {
   );
 }
 
+function badgeClass(pub) {
+  return /workshop/i.test(pub.venueFull) ? 'badge-workshop' : 'badge-conference';
+}
+
 function PubEntry({ pub }) {
   return (
     <li className="pub">
       <div className="pub-venue">
-        <span className="badge">{pub.venue}</span>
+        <span className={`badge ${badgeClass(pub)}`}>{pub.venue}</span>
       </div>
       <div className="pub-body">
         <h3 className="pub-title">{pub.title}</h3>
         <Authors authors={pub.authors} />
         <div className="pub-venue-full">{pub.venueFull}</div>
+        {pub.description && <p className="pub-desc">{pub.description}</p>}
         {pub.award && (
           <div className="pub-award" title={pub.awardNote}>
-            🏆 {pub.award}
+            ★ {pub.award}
             {pub.awardNote ? ` — ${pub.awardNote}` : ''}
           </div>
         )}
@@ -46,10 +51,11 @@ export default function Publications() {
 
   return (
     <article className="page publications">
-      <h1>publications</h1>
+      <h1>Publications</h1>
       <p className="muted">
         Selected workshop and conference papers. See{' '}
-        <a href="https://orcid.org/0009-0003-2575-5493">ORCID</a> for the full record.
+        <a href="https://scholar.google.com/citations?user=L0tpB4EAAAAJ">Google Scholar</a> for the
+        full record.
       </p>
       {years.map((year) => (
         <section key={year} className="pub-year-group">
