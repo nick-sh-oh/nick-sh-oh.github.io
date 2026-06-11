@@ -17,7 +17,7 @@ export const exhibitions = [
       'Spotlight — one of 12 spotlighted works',
     ],
     description:
-      'Yann LeCun’s original Bell Labs LeNet-1, rebuilt in a physical substrate of transparent circuit boards, LEDs, and glass. The installation runs live computation, exploring how an early convolutional network “thinks”.',
+      'Yann LeCun’s LeNet-1, rebuilt in a physical substrate of transparent circuit boards, LEDs, and glass. The installation runs live computation, exploring how an early convolutional network “thinks”.',
     links: {
       Gallery: 'https://thecvf-art.com/project.php?year=2026&artist=nick-oh&id=992',
     },
