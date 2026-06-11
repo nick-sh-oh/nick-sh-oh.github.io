@@ -24,7 +24,7 @@ export const publications = [
     venue: "AIES'25",
     title: 'PETLP: A Privacy-by-Design Pipeline for Social Media Data in AI Research',
     authors: ['Nick Oh', 'Giorgos D. Vrakas', 'Siân J. M. Brooke', 'Sasha Morinière', 'Toju Duke'],
-    venueFull: 'The 8th AAAI/ACM Conference on AI, Ethics, and Society (AIES)',
+    venueFull: 'Proceedings of the 8th AAAI/ACM Conference on AI, Ethics, and Society (AIES)',
     year: 2025,
     selected: false,
     links: {

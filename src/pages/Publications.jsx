@@ -13,15 +13,15 @@ function Authors({ authors }) {
   );
 }
 
-function badgeClass(pub) {
-  return /workshop/i.test(pub.venueFull) ? 'badge-workshop' : 'badge-conference';
-}
-
 function PubEntry({ pub }) {
+  const isWorkshop = /workshop/i.test(pub.venueFull);
   return (
     <li className="pub">
       <div className="pub-venue">
-        <span className={`badge ${badgeClass(pub)}`}>{pub.venue}</span>
+        <span className={`badge ${isWorkshop ? 'badge-workshop' : 'badge-conference'}`}>
+          {pub.venue}
+        </span>
+        <span className="badge-type">{isWorkshop ? 'Workshop' : 'Proceedings'}</span>
       </div>
       <div className="pub-body">
         <h3 className="pub-title">{pub.title}</h3>
@@ -53,9 +53,7 @@ export default function Publications() {
     <article className="page publications">
       <h1>Publications</h1>
       <p className="muted">
-        Selected workshop and conference papers. See{' '}
-        <a href="https://scholar.google.com/citations?user=L0tpB4EAAAAJ">Google Scholar</a> for the
-        full record.
+        Also on <a href="https://scholar.google.com/citations?user=L0tpB4EAAAAJ">Google Scholar</a>.
       </p>
       {years.map((year) => (
         <section key={year} className="pub-year-group">
