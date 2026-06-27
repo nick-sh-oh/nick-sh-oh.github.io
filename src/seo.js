@@ -15,7 +15,7 @@ export const ROUTES = [
     path: '/',
     title: 'Nick (Seungheon) Oh — Researcher @ socius labs',
     description:
-      'Researcher at socius labs bridging cognitive science and machine intelligence — metacognition in AI, explainability (XAI), and neural networks as cognitive models.',
+      'Borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
   },
   {
     path: '/publications',
