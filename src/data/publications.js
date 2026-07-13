@@ -4,6 +4,32 @@ export const me = ['Nick Oh', 'Seungheon Oh'];
 
 export const publications = [
   {
+    id: 'smallfm',
+    venue: "COLM'26",
+    title: 'Small Foundation Models of Human Cognition and Behaviour',
+    authors: ['Nick Oh', 'Fernand Gobet'],
+    venueFull: 'The 3rd Conference on Language Modeling (COLM)',
+    year: 2026,
+    selected: true,
+    links: {},
+  },
+  {
+    id: 'limits',
+    venue: "ICML'26",
+    title:
+      'Reliability, Faithfulness, and the Limits of Post-hoc Explanations of Opaque Scientific Models',
+    authors: ['Nick Oh', 'Helen Jin'],
+    venueFull:
+      'Philosophy Meets Machine Learning (PhilML) Workshop at the 43rd International Conference on Machine Learning (ICML)',
+    year: 2026,
+    selected: false,
+    links: {
+      'arXiv': 'https://arxiv.org/abs/2606.29346',
+      PDF: '/pdf/limitsofxai.pdf',
+      Poster: '/pdf/limitsofxai_poster.pdf',
+    },
+  },
+  {
     id: 'mgv',
     venue: "NeurIPS'25",
     title:
@@ -63,7 +89,7 @@ export const publications = [
       Page: 'https://neurips.cc/virtual/2024/104306',
       PDF: '/pdf/sys1point5.pdf',
       Poster: '/pdf/sys1point5_poster.pdf',
-      Video: 'https://www.youtube-nocookie.com/embed/BedeAoplLVk',
+      Video: 'https://www.youtube.com/watch?v=BedeAoplLVk',
     },
   },
   {

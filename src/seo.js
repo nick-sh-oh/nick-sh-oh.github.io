@@ -15,13 +15,13 @@ export const ROUTES = [
     path: '/',
     title: 'Nick (Seungheon) Oh — Researcher @ socius labs',
     description:
-      'Borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
+      'Nick (Seungheon) Oh is a researcher at socius labs, borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
   },
   {
     path: '/publications',
     title: 'Publications — Nick (Seungheon) Oh',
     description:
-      'Papers by Nick Oh at NeurIPS, COLM, AIES, and ICWSM — on metacognition in AI systems, post-hoc explainability, privacy-by-design pipelines, and sentiment resources.',
+      'Papers by Nick Oh at NeurIPS, ICML, COLM, AIES, and ICWSM — on metacognition in AI systems, post-hoc explainability, small foundation models of human cognition, privacy-by-design pipelines, and sentiment resources.',
   },
   {
     path: '/exhibitions',

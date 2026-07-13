@@ -21,7 +21,7 @@ function PubEntry({ pub }) {
         <span className={`badge ${isWorkshop ? 'badge-workshop' : 'badge-conference'}`}>
           {pub.venue}
         </span>
-        <span className="badge-type">{isWorkshop ? 'Workshop' : 'Proceedings'}</span>
+        <span className="badge-type">{isWorkshop ? 'Workshop' : 'Main track'}</span>
       </div>
       <div className="pub-body">
         <h3 className="pub-title">{pub.title}</h3>

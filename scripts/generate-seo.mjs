@@ -34,6 +34,7 @@ const absImage = SITE.origin + SITE.image;
 
 function externalUrl(pub) {
   const links = Object.values(pub.links);
+  if (links.length === 0) return undefined; // JSON.stringify drops the url key
   return links.find((href) => href.startsWith('http')) ?? SITE.origin + links[0];
 }
 
@@ -44,6 +45,16 @@ function jsonLdFor(path) {
       '@type': 'Person',
       name: 'Nick (Seungheon) Oh',
       alternateName: ['Nick Oh', 'Seungheon Oh'],
+      description:
+        'Researcher at socius labs bridging cognitive science and machine intelligence.',
+      email: 'mailto:nick.sh.oh@socius.org',
+      knowsAbout: [
+        'Cognitive science',
+        'Metacognition',
+        'Large language models',
+        'Explainable AI',
+        'Computational social science',
+      ],
       jobTitle: 'Researcher',
       worksFor: { '@type': 'Organization', name: 'socius labs', url: 'https://socius.org' },
       alumniOf: {
@@ -120,7 +131,7 @@ function blockFor(route) {
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:image" content="${img}" />`,
     `<meta property="og:image:alt" content="${esc(imgAlt)}" />`,
-    `<meta name="twitter:card" content="summary" />`,
+    `<meta name="twitter:card" content="${route.image ? 'summary_large_image' : 'summary'}" />`,
     `<meta name="twitter:site" content="${SITE.twitter}" />`,
     `<meta name="twitter:title" content="${esc(route.title)}" />`,
     `<meta name="twitter:description" content="${esc(route.description)}" />`,
