@@ -34,7 +34,7 @@ export default function About() {
           (which is a long-winded way of saying cognitive science).
         </p>
         <p>
-          These days, I’m informally advised by{' '}
+          These days, I’m advised by{' '}
           <a href="https://scholar.google.com/citations?user=jeJqwKsAAAAJ">
             Professor Fernand Gobet
           </a>
@@ -52,14 +52,12 @@ export default function About() {
           LSE and LSE Generate exploring this convergence.
         </p>
         <p>
-          <strong>Research interests</strong>: My work runs in two directions. One asks whether the
-          fields that explained humans can improve machines — not just their performance, but how
-          they collaborate with us. The other asks whether machines can test human theories at
-          impossible scales. Increasingly, I’m drawn to using neural networks of varying scales and
-          architectures — from RNNs to LLMs — as cognitive models to better understand the
-          computational principles underlying humans. I’m also interested in whether we can measure
-          and operationalise metacognitive functions and subjective “feelings” or “beliefs” in
-          machines.
+          <strong>Research interests</strong>: I use neural networks of varying scales and
+          architectures (from RNNs to LLMs) as cognitive proxies, both to understand cognition at
+          the individual level and to test social-scientific theories at scales impossible with
+          human subjects. Increasingly, I’m drawn to their latent space: whether reasoning can
+          unfold there without ever surfacing as text, and whether we can measure, and even steer,
+          subjective “feelings” or “beliefs” in machines.
         </p>
       </div>
 
