@@ -1,5 +1,6 @@
 import { exhibitions } from '../data/exhibitions.js';
 import { me } from '../data/publications.js';
+import LinkPills from '../components/LinkPills.jsx';
 
 function Creators({ creators }) {
   return (
@@ -41,13 +42,7 @@ export default function Exhibitions() {
             </figure>
           )}
           <p className="exhibit-desc">{ex.description}</p>
-          <div className="pub-links">
-            {Object.entries(ex.links).map(([label, href]) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer">
-                {label}
-              </a>
-            ))}
-          </div>
+          <LinkPills links={ex.links} title={ex.title} />
         </section>
       ))}
     </article>

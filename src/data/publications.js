@@ -20,7 +20,7 @@ export const publications = [
       'Reliability, Faithfulness, and the Limits of Post-hoc Explanations of Opaque Scientific Models',
     authors: ['Nick Oh', 'Helen Jin'],
     venueFull:
-      'Philosophy Meets Machine Learning (PhilML) Workshop at the 43rd International Conference on Machine Learning (ICML)',
+      'PhilML Workshop at the 43rd International Conference on Machine Learning (ICML)',
     year: 2026,
     selected: false,
     links: {

@@ -1,4 +1,5 @@
 import { publications, me } from '../data/publications.js';
+import LinkPills from '../components/LinkPills.jsx';
 
 function Authors({ authors }) {
   return (
@@ -34,13 +35,7 @@ function PubEntry({ pub }) {
             {pub.awardNote ? ` — ${pub.awardNote}` : ''}
           </div>
         )}
-        <div className="pub-links">
-          {Object.entries(pub.links).map(([label, href]) => (
-            <a key={label} href={href} target="_blank" rel="noopener noreferrer">
-              {label}
-            </a>
-          ))}
-        </div>
+        <LinkPills links={pub.links} title={pub.title} />
       </div>
     </li>
   );

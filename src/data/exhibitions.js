@@ -21,7 +21,7 @@ export const exhibitions = [
     links: {
       Gallery: 'https://thecvf-art.com/project.php?year=2026&artist=nick-oh&id=992',
       Video: 'https://www.youtube.com/watch?v=QGxGXySgqCI',
-      Ceremony: '/img/tcpami_award_cvpr2026.jpg',
+      'TCPAMI Award': '/img/tcpami_award_cvpr2026.jpg',
     },
   },
 ];

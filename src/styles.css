@@ -348,19 +348,73 @@ h2 {
   gap: 8px;
   margin-top: 12px;
 }
-.pub-links a {
+.pub-links a,
+.pub-links button {
+  font-family: inherit;
   font-size: 13px;
   font-weight: 500;
   padding: 6px 12px;
+  border: none;
   border-radius: 999px;
   background: var(--soft);
   color: var(--text);
   text-decoration: none;
+  cursor: pointer;
   transition: opacity 0.2s ease-in-out;
 }
-.pub-links a:hover {
+.pub-links a:hover,
+.pub-links button:hover {
   opacity: 0.45;
   color: var(--text);
+}
+
+/* ---------- Lightbox (Video / Ceremony popups) ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.lightbox-content {
+  width: min(920px, 100%);
+}
+.lightbox-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 85vh;
+  border: 0;
+  border-radius: 20px;
+  background: #000;
+}
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.lightbox-close:hover {
+  opacity: 0.45;
 }
 
 /* ---------- Exhibitions ---------- */
