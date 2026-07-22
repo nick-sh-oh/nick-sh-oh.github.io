@@ -4,7 +4,7 @@ export default function CV() {
       <div className="cv-header">
         <div>
           <h1>Curriculum Vitae</h1>
-          <p className="cv-updated">Last updated December 2025</p>
+          <p className="cv-updated">Last updated July 2026</p>
         </div>
         <a className="btn" href="/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
           Open / Download PDF ↗

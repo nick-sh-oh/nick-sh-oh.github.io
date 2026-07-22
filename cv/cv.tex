@@ -1,0 +1,156 @@
+% CV of Nick (Seungheon) Oh — LaTeX replica of the resume.io-exported cv.pdf,
+% content refreshed July 2026 (COLM'26 + ICML'26 papers, CVPR'26 exhibition).
+% Compile: pdflatex cv.tex
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, top=32pt, bottom=44pt, left=45pt, right=43pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}          % Times
+\usepackage{microtype}         % \textls letterspacing for section labels
+\usepackage[normalem]{ulem}    % \uline for underlined links
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[colorlinks=false,pdfborder={0 0 0},
+            pdftitle={Nick (Seungheon) Oh -- CV},
+            pdfauthor={Nick (Seungheon) Oh}]{hyperref}
+
+\definecolor{textcol}{RGB}{33,33,33}
+\definecolor{linkblue}{RGB}{0,102,204}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\emergencystretch=1.5em
+
+% ---- layout dimensions (measured from original PDF link rects) ----
+\newlength{\labelw}\setlength{\labelw}{123pt}
+\newlength{\colgap}\setlength{\colgap}{3pt}
+\newlength{\contentw}\setlength{\contentw}{381pt}
+
+% ---- type styles ----
+\newcommand{\bodysize}{\fontsize{9}{11.25}\selectfont}
+\newcommand{\lblfont}{\fontsize{7.5}{9.5}\selectfont}
+\newcommand{\titlefont}{\fontsize{11}{13.2}\selectfont}
+
+\newcommand{\lbl}[1]{{\lblfont\textls[90]{#1}}}
+
+% ---- links ----
+\newcommand{\dlink}[2]{\href{#1}{\textcolor{textcol}{\uline{#2}}}}   % dark underlined
+\newcommand{\ilink}[2]{\href{#1}{\textcolor{linkblue}{\uline{#2}}}}  % blue inline
+\newcommand{\plink}[2]{[\href{#1}{\textcolor{linkblue}{\uline{\textbf{#2}}}}]} % [Paper]-style
+
+% ---- section machinery ----
+\newcommand{\secrule}{\par\needspace{48pt}\vspace{11pt}\noindent{\color{textcol}\rule{\textwidth}{0.75pt}}\par\vspace{10pt}\nopagebreak}
+% label-only row (EDUCATION, EMPLOYMENT HISTORY)
+\newcommand{\lblrow}[1]{\noindent\lbl{#1}\par\nopagebreak\vspace{8pt}}
+% two-column row: #1 label (letterspaced caps), #2 content
+\newcommand{\cvrow}[2]{\noindent\begin{minipage}[t]{\labelw}\raggedright\lbl{#1}\end{minipage}\hspace{\colgap}%
+\begin{minipage}[t]{\contentw}#2\end{minipage}\par}
+% two-column row with a date in the left column
+\newcommand{\daterow}[2]{\noindent\begin{minipage}[t]{\labelw}\raggedright #1\end{minipage}\hspace{\colgap}%
+\begin{minipage}[t]{\contentw}#2\end{minipage}\par}
+% continuation row: empty left column (further entries of the same section)
+\newcommand{\controw}[1]{\vspace{10pt}\noindent\hspace{\labelw}\hspace{\colgap}%
+\begin{minipage}[t]{\contentw}#1\end{minipage}\par}
+% entry heading: large title + right-aligned place
+% \hspace*{\fill} keeps the place right-aligned even when it wraps to its own line
+\newcommand{\entry}[2]{{\titlefont #1}\nolinebreak[1]\hspace*{\fill} {\bodysize #2}}
+
+\newcommand{\parasep}{\par\vspace{5.5pt}}
+\newcommand{\entrysep}{\vspace{10pt}}
+
+\setlist[itemize,1]{label={\small\textbullet}, leftmargin=13pt, labelsep=5pt,
+                    itemsep=1.2pt, topsep=2.5pt, parsep=0pt, partopsep=0pt}
+\setlist[itemize,2]{label={\small\textbullet}, leftmargin=13pt, labelsep=5pt,
+                    itemsep=1.2pt, topsep=1.2pt, parsep=0pt, partopsep=0pt}
+
+\begin{document}\color{textcol}\bodysize
+
+% ================= HEADER =================
+\begin{center}
+{\fontsize{14}{16.8}\selectfont\bfseries Nick (Seungheon) Oh}\\[6pt]
+{\bodysize\href{mailto:nick.sh.oh@gmail.com}{\textcolor{textcol}{nick.sh.oh@gmail.com}}}
+\end{center}
+
+% ================= EDUCATION =================
+\secrule
+\lblrow{EDUCATION}
+\daterow{Apr 2022 --- Sept 2023}{%
+\entry{MSc Data Science and Artificial Intelligence, University of London}{London}\par\vspace{3pt}
+\textbf{\textit{Distinction}}}
+\entrysep
+\daterow{Sept 2016 --- Jun 2020}{%
+\entry{BSc Government and Economics, London School of Economics \& Political Science (LSE)}{London}\par\vspace{3pt}
+\textbf{\textit{Upper Second Class Honours}} [Cumulative GPA: 3.5-7/4.0]}
+
+% ================= EMPLOYMENT HISTORY =================
+\secrule
+\lblrow{EMPLOYMENT HISTORY}
+\daterow{Mar 2025 --- Present}{%
+\entry{Defence AI researcher, Ministry of National Defence}{Republic of Korea}\par\vspace{3pt}
+Assigned to the S/C3 (Command, Control \& Communications) Capability Requirements Branch, Training and Doctrine Command (TRADOC); on assignment from the Military Science and Technology Research Unit, Republic of Korea Army Headquarters [received TRADOC Commander's commendation for outstanding performance]}
+\entrysep
+\daterow{Jan 2023 --- Present}{%
+\entry{Researcher, socius labs}{London}\par\vspace{3pt}
+Founded \ilink{https://socius.org}{socius labs}, an independent research lab supported by the London School of Economics (LSE) and LSE Generate, bridging human sciences and artificial intelligence through two parallel research streams: applying insights from human sciences to enhance AI systems, and leveraging AI as a platform to run human theories at scale.}
+\entrysep
+\daterow{Nov 2021 --- Oct 2022}{%
+\entry{Junior NLP engineer, Numen Capital}{London}\par\vspace{3pt}
+Contributed to Knowsis research team extracting trading signals from non-traditional data sources (social media) through NLP and machine learning. Built transformer-based ESG (Environment, Social, Governance) tweet classifier achieving 97\% accuracy, implemented rule-based sentiment analyser with custom financial dictionaries, and integrated these NLP-derived features into deep learning models for market movement forecasting. Developed end-to-end pipeline from raw text to actionable trading signals.}
+
+% ================= CONFERENCE PROCEEDINGS =================
+\newpage
+\secrule
+\cvrow{CONFERENCE\\PROCEEDINGS}{%
+\textbf{Oh, N.}, \& Gobet, F. (2026). Small Foundation Models of Human Cognition and Behaviour. \textit{The 3rd Conference on Language Modeling (\textbf{COLM'26})}}
+\controw{%
+\textbf{Oh, N.}, Vrakas, G.~D., Brooke, S.~J., Morini\`ere, S., \& Duke, T. (2025). PETLP: A Privacy-by-Design Pipeline for Social Media Data in AI Research. \textit{Proceedings of the 8th AAAI/ACM Conference on AI, Ethics, and Society (\textbf{AIES'25})} \plink{https://doi.org/10.1609/aies.v8i2.36685}{Paper} \plink{https://nick-sh-oh.github.io/pdf/PETLP_poster.pdf}{Poster}}
+\controw{%
+\textbf{Oh, N.} (2024). Sentibank: A Unified Resource of Sentiment Lexicons and Dictionaries. \textit{Proceedings of the 18th International AAAI Conference on Web and Social Media (\textbf{ICWSM'24})} \plink{https://doi.org/10.1609/icwsm.v18i1.31443}{Paper} \plink{https://nick-sh-oh.github.io/pdf/sentibank_poster.pdf}{Poster}}
+
+% ================= WORKSHOPS =================
+\secrule
+\cvrow{WORKSHOPS}{%
+\textbf{Oh, N.}, \& Jin, H. (2026). Reliability, Faithfulness, and the Limits of Post-hoc Explanations of Opaque Scientific Models. \textit{Philosophy of Machine Learning Workshop @ the 43rd International Conference on Machine Learning (\textbf{PhilML Workshop, ICML'26})} \plink{https://arxiv.org/abs/2606.29346}{Paper} \plink{https://nick-sh-oh.github.io/pdf/limitsofxai_poster.pdf}{Poster}}
+\controw{%
+\textbf{Oh, N.}, \& Gobet, F. (2025). Monitor-Generate-Verify (MGV): Formalising Metacognitive Theory for Language Model Reasoning. \textit{Workshop on Foundations of Reasoning in Language Models @ the 39th Annual Conference on Neural Information Processing Systems (\textbf{FoRLM Workshop, NeurIPS'25})} \plink{https://arxiv.org/abs/2511.04341}{Paper} \plink{https://nick-sh-oh.github.io/pdf/mgv_poster.pdf}{Poster}}
+\controw{%
+\textbf{Oh, N.} (2025). Before you <think>, monitor: Implementing Flavell's metacognitive framework in LLMs. \textit{Workshop on the Application of LLM Explainability to Reasoning and Planning @ Conference on Language Modeling (\textbf{XLLM-Reason-Plan Workshop, COLM'25})} \plink{https://arxiv.org/abs/2510.16374}{Paper} \plink{https://nick-sh-oh.github.io/pdf/beforeyouthink_poster.pdf}{Poster}}
+\controw{%
+\textbf{Oh, N.}, \& Gobet, F. (2024). System 1.5: Designing Metacognition in Artificial Intelligence. \textit{System 2 Reasoning at Scale Workshop @ the 38th Annual Conference on Neural Information Processing Systems (\textbf{Sys2-Reasoning Workshop, NeurIPS'24; Spotlight})} \plink{https://neurips.cc/virtual/2024/104306}{Paper} \plink{https://nick-sh-oh.github.io/pdf/sys1point5_poster.pdf}{Poster} \plink{https://www.youtube.com/watch?v=BedeAoplLVk}{Spotlight Presentation (Video)}}
+\controw{%
+\textbf{Oh, N.} (2024). In Defence of Post-hoc Explainability. \textit{Interpretable AI: Past, Present and Future Workshop @ the 38th Annual Conference on Neural Information Processing Systems (\textbf{IAI Workshop, NeurIPS'24})} \plink{https://arxiv.org/abs/2412.17883}{Paper} \plink{https://nick-sh-oh.github.io/pdf/indefenceofxai_poster.pdf}{Poster}}
+
+% ================= MANUSCRIPT IN PREPARATION =================
+\secrule
+\cvrow{MANUSCRIPT IN\\PREPARATION}{%
+Humphrey, J., \textbf{Oh, N.}, \& Ross, D. (in review). High-Intensity Ambivalence: Beyond Acceptance and Resistance to Generative AI in Occupational Communities.}
+
+% ================= TEACHING & TUTORIALS =================
+\secrule
+\cvrow{TEACHING \& TUTORIALS}{%
+\textit{Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor} --- Tutorial @ ICWSM'24, co-organised with the Open Data Institute (ODI)}
+
+% ================= EXHIBITIONS =================
+\secrule
+\cvrow{EXHIBITIONS}{%
+\textbf{Oh, N.}, \& Park, A. (2026). artefact(s): LeNet-1. \textit{Art Gallery @ the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Denver (\textbf{CVPR'26; IEEE TCPAMI Art Award; Spotlight})} \plink{https://thecvf-art.com/project.php?year=2026&artist=nick-oh&id=992}{Gallery} \plink{https://www.youtube.com/watch?v=QGxGXySgqCI}{Video}}
+
+% ================= RELEVANT TRAINING & SKILLS =================
+\secrule
+\cvrow{RELEVANT TRAINING \&\\SKILLS}{%
+\begin{minipage}[t]{188pt}\raggedright
+LSE MA314: Algorithms and Programming (First Class)
+\parasep
+LSE GV324: Applied Quantitative Methods for Political Science (First Class)
+\parasep
+LSE GV249: Research Design in Political Science (Upper Second Class)
+\end{minipage}\hfill
+\begin{minipage}[t]{180pt}\raggedright
+LSE Methodology \& Quantitative Training: Causal inference and natural experiments in the social sciences (regression, matching, panel data, diff-in-diff, instrumental variables, regression discontinuity)
+\parasep
+Python: PyTorch, spaCy, NLTK, transformers, trl, unsloth, vllm, peft, PRAW, OpenAPI
+\end{minipage}}
+
+\end{document}

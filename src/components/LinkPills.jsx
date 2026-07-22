@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { GitHubIcon } from './icons.jsx';
 
 // Video links and links to image files open in an in-page lightbox instead of a new tab.
 const popupKind = (label, href) =>
@@ -53,6 +54,18 @@ export default function LinkPills({ links, title }) {
           >
             {label}
           </button>
+        ) : label === 'GitHub' ? (
+          <a
+            key={label}
+            className="pub-link-icon"
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <GitHubIcon width="15" height="15" />
+          </a>
         ) : (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer">
             {label}

@@ -367,6 +367,13 @@ h2 {
   opacity: 0.45;
   color: var(--text);
 }
+.pub-links .pub-link-icon {
+  display: inline-flex;
+  align-items: center;
+}
+.pub-links .pub-link-icon svg {
+  display: block;
+}
 
 /* ---------- Lightbox (Video / Ceremony popups) ---------- */
 .lightbox {
