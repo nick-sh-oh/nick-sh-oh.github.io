@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
-import { GitHubIcon } from './icons.jsx';
+import { GitHubIcon, HuggingFaceIcon } from './icons.jsx';
 
 // Video links and links to image files open in an in-page lightbox instead of a new tab.
 const popupKind = (label, href) =>
   label === 'Video' ? 'video' : /\.(jpe?g|png|webp|gif)$/i.test(href) ? 'image' : null;
+
+// Labels rendered as an icon-only pill instead of text.
+const brandIcons = { GitHub: GitHubIcon, 'Hugging Face': HuggingFaceIcon };
 
 const youTubeId = (url) => url.match(/[?&]v=([\w-]+)/)?.[1] ?? url.split('/').pop();
 
@@ -45,33 +48,35 @@ export default function LinkPills({ links, title }) {
 
   return (
     <div className="pub-links">
-      {Object.entries(links).map(([label, href]) =>
-        popupKind(label, href) ? (
+      {Object.entries(links).map(([label, href]) => {
+        const kind = popupKind(label, href);
+        const Icon = brandIcons[label];
+        return kind ? (
           <button
             key={label}
             type="button"
-            onClick={() => setItem({ kind: popupKind(label, href), src: href, title: `${title} — ${label}` })}
+            onClick={() => setItem({ kind, src: href, title: `${title} — ${label}` })}
           >
             {label}
           </button>
-        ) : label === 'GitHub' ? (
+        ) : Icon ? (
           <a
             key={label}
             className="pub-link-icon"
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
+            aria-label={label}
+            title={label}
           >
-            <GitHubIcon width="15" height="15" />
+            <Icon width="15" height="15" />
           </a>
         ) : (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer">
             {label}
           </a>
-        )
-      )}
+        );
+      })}
       {item && <Lightbox item={item} onClose={() => setItem(null)} />}
     </div>
   );

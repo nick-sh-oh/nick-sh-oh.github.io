@@ -10,3 +10,6 @@ Gemfile.lock
 node_modules/
 vendor
 dist/
+cv/*.aux
+cv/*.log
+cv/*.out

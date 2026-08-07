@@ -11,7 +11,12 @@ export const publications = [
     venueFull: 'The 3rd Conference on Language Modeling (COLM)',
     year: 2026,
     selected: true,
-    links: {},
+    links: {
+      'arXiv': 'https://arxiv.org/abs/2608.05224',
+      PDF: '/pdf/smallcogfm.pdf',
+      GitHub: 'https://github.com/socius-org/Centauri',
+      'Hugging Face': 'https://huggingface.co/collections/socius/centauri',
+    },
   },
   {
     id: 'limits',
