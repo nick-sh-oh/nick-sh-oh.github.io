@@ -1,9 +1,22 @@
 import { useEffect, useState } from 'react';
 import { GitHubIcon, HuggingFaceIcon } from './icons.jsx';
 
-// Video links and links to image files open in an in-page lightbox instead of a new tab.
+// Video links ("Video", "Video 1", …) and links to image files open in an
+// in-page lightbox instead of a new tab. Reddit-hosted videos embed via
+// Reddit's dedicated embed host, which permits framing (frame-ancestors *).
 const popupKind = (label, href) =>
-  label === 'Video' ? 'video' : /\.(jpe?g|png|webp|gif)$/i.test(href) ? 'image' : null;
+  /^Video/.test(label)
+    ? href.includes('reddit.com')
+      ? 'reddit'
+      : 'video'
+    : /\.(jpe?g|png|webp|gif)$/i.test(href)
+      ? 'image'
+      : null;
+
+const redditEmbedUrl = (url) => {
+  const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  return url.replace('://www.reddit.com', '://embed.reddit.com') + `?embed=true&theme=${theme}`;
+};
 
 // Labels rendered as an icon-only pill instead of text.
 const brandIcons = { GitHub: GitHubIcon, 'Hugging Face': HuggingFaceIcon };
@@ -33,6 +46,14 @@ function Lightbox({ item, onClose }) {
             src={`https://www.youtube-nocookie.com/embed/${youTubeId(item.src)}?autoplay=1&playsinline=1`}
             title={item.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        ) : item.kind === 'reddit' ? (
+          <iframe
+            className="lightbox-reddit"
+            src={redditEmbedUrl(item.src)}
+            title={item.title}
+            allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture; web-share"
             allowFullScreen
           />
         ) : (

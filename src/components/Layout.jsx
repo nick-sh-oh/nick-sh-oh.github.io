@@ -67,7 +67,8 @@ export default function Layout({ children }) {
               About
             </NavLink>
             <NavLink to="/publications">Publications</NavLink>
-            <NavLink to="/exhibitions">Exhibitions</NavLink>
+            <NavLink to="/teaching">Teaching</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/cv">CV</NavLink>
             <ThemeToggle />
           </div>

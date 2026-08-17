@@ -24,10 +24,16 @@ export const ROUTES = [
       'Papers by Nick Oh at NeurIPS, ICML, COLM, AIES, and ICWSM — on metacognition in AI systems, post-hoc explainability, small foundation models of human cognition, privacy-by-design pipelines, and sentiment resources.',
   },
   {
-    path: '/exhibitions',
-    title: 'Exhibitions — Nick (Seungheon) Oh',
+    path: '/teaching',
+    title: 'Teaching — Nick (Seungheon) Oh',
     description:
-      'artefact(s): LeNet-1 — LeCun’s original CNN rebuilt in circuit boards, LEDs, and glass. Spotlighted at the CVPR 2026 Art Gallery and awarded the IEEE TCPAMI Art Award.',
+      'Lecture notes by Nick Oh — including Introduction to Transformers and LLMs (with Steven Feng, Stanford), a self-contained mathematical account of attention and the decoder-only transformer, from token embeddings to next-token prediction.',
+  },
+  {
+    path: '/projects',
+    title: 'Projects — Nick (Seungheon) Oh',
+    description:
+      'Projects by Nick Oh — artefact(s): LeNet-1, LeCun’s original CNN rebuilt in circuit boards and glass (CVPR 2026 Art Gallery, IEEE TCPAMI Art Award); Glyphs, a generative visual language of socius marks; and RedditHarbor, a Python library for ethical Reddit data collection.',
     image: '/img/artefacts-lenet1.jpg',
     imageAlt: 'artefact(s): LeNet-1 — violet LED installation in a transparent case at CVPR 2026',
   },

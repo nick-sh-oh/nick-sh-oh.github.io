@@ -11,7 +11,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE, ROUTES } from '../src/seo.js';
 import { publications } from '../src/data/publications.js';
-import { exhibitions } from '../src/data/exhibitions.js';
+import { projects } from '../src/data/projects.js';
+import { teachingNotes } from '../src/data/teaching.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
@@ -92,23 +93,50 @@ function jsonLdFor(path) {
       })),
     };
   }
-  if (path === '/exhibitions') {
+  if (path === '/teaching') {
     return {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Exhibitions by Nick Oh',
-      itemListElement: exhibitions.map((ex, i) => ({
+      name: 'Teaching materials by Nick Oh',
+      itemListElement: teachingNotes.map((note, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
-          '@type': 'VisualArtwork',
-          name: ex.title,
-          creator: ex.creators.map((name) => ({ '@type': 'Person', name })),
-          dateCreated: String(ex.year),
-          award: ex.awards,
-          image: ex.image ? SITE.origin + ex.image : undefined,
-          url: externalUrl(ex),
+          '@type': 'LearningResource',
+          name: note.title,
+          author: note.authors.map((name) => ({ '@type': 'Person', name })),
+          datePublished: note.dateISO,
+          url: externalUrl(note),
         },
+      })),
+    };
+  }
+  if (path === '/projects') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Projects by Nick Oh',
+      itemListElement: projects.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item:
+          p.kind === 'exhibition'
+            ? {
+                '@type': 'VisualArtwork',
+                name: p.title,
+                creator: p.creators.map((name) => ({ '@type': 'Person', name })),
+                dateCreated: String(p.year),
+                award: p.awards,
+                image: p.image ? SITE.origin + p.image : undefined,
+                url: externalUrl(p),
+              }
+            : {
+                '@type': 'SoftwareSourceCode',
+                name: p.title,
+                description: p.description,
+                codeRepository: p.links.GitHub,
+                url: externalUrl(p),
+              },
       })),
     };
   }
