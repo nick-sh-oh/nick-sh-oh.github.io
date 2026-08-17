@@ -1,4 +1,8 @@
 import { MailIcon, GitHubIcon, XIcon, LinkedInIcon, SubstackIcon } from '../components/icons.jsx';
+import LinkPills from '../components/LinkPills.jsx';
+import { publications, me } from '../data/publications.js';
+
+const latest = publications.find((p) => p.id === 'smallfm');
 
 const socials = [
   { label: 'Email', href: 'mailto:nick.sh.oh@socius.org', icon: MailIcon },
@@ -60,6 +64,47 @@ export default function About() {
           subjective “feelings” or “beliefs” in machines.
         </p>
       </div>
+
+      <section className="latest" aria-label="Latest work">
+        <h2>Latest</h2>
+        <div className="latest-item">
+          <div className="latest-body">
+            <div className="latest-meta">
+              <span className="badge badge-conference">{latest.venue}</span>
+              <span className="badge-type">Main track</span>
+            </div>
+            <h3 className="pub-title">{latest.title}</h3>
+            <span className="authors">
+              {latest.authors.map((a, i) => (
+                <span key={a}>
+                  {me.includes(a) ? <strong>{a}</strong> : a}
+                  {i < latest.authors.length - 1 ? ', ' : ''}
+                </span>
+              ))}
+            </span>
+            <LinkPills links={latest.links} title={latest.title} />
+          </div>
+          <a
+            className="latest-media-link"
+            href={latest.links.GitHub}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Centauri on GitHub"
+            title="Centauri on GitHub"
+          >
+            <video
+              className="latest-media"
+              src="/video/centauri.mp4"
+              poster="/img/centauri_poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="Centauri — animated title card for Small Foundation Models of Human Cognition and Behaviour, styled as a classical painting of centaurs among Greek ruins."
+            />
+          </a>
+        </div>
+      </section>
 
       <div className="socials">
         {socials.map(({ label, href, icon: Icon }) => (
