@@ -97,21 +97,22 @@ export const publications = [
       Video: 'https://www.youtube.com/watch?v=BedeAoplLVk',
     },
   },
-  {
-    id: 'position',
-    venue: "NeurIPS'24",
-    title: 'In Defence of Post-hoc Explainability',
-    authors: ['Nick Oh'],
-    venueFull:
-      'Interpretable AI: Past, Present and Future Workshop at the 38th Conference on Neural Information Processing Systems (NeurIPS)',
-    year: 2024,
-    selected: true,
-    links: {
-      'arXiv': 'https://arxiv.org/abs/2412.17883',
-      PDF: '/pdf/indefenceofxai.pdf',
-      Poster: '/pdf/indefenceofxai_poster.pdf',
-    },
-  },
+  // Temporarily hidden — being reworked for a future conference main-track submission.
+  // {
+  //   id: 'position',
+  //   venue: "NeurIPS'24",
+  //   title: 'In Defence of Post-hoc Explainability',
+  //   authors: ['Nick Oh'],
+  //   venueFull:
+  //     'Interpretable AI: Past, Present and Future Workshop at the 38th Conference on Neural Information Processing Systems (NeurIPS)',
+  //   year: 2024,
+  //   selected: true,
+  //   links: {
+  //     'arXiv': 'https://arxiv.org/abs/2412.17883',
+  //     PDF: '/pdf/indefenceofxai.pdf',
+  //     Poster: '/pdf/indefenceofxai_poster.pdf',
+  //   },
+  // },
   {
     id: 'sentibank',
     venue: "ICWSM'24",
