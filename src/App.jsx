@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import About from './pages/About.jsx';
@@ -30,11 +30,29 @@ function RouteMeta() {
   return null;
 }
 
+// Report client-side navigations to GoatCounter. The initial page load is
+// counted by count.js itself (see index.html), so the first render is skipped.
+function TrackPageviews() {
+  const location = useLocation();
+  const isFirstRender = useRef(true);
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    window.goatcounter?.count?.({
+      path: location.pathname + location.search + location.hash,
+    });
+  }, [location]);
+  return null;
+}
+
 export default function App() {
   return (
     <Layout>
       <ScrollToTop />
       <RouteMeta />
+      <TrackPageviews />
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/publications" element={<Publications />} />
