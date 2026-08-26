@@ -47,7 +47,7 @@ function jsonLdFor(path) {
       name: 'Nick (Seungheon) Oh',
       alternateName: ['Nick Oh', 'Seungheon Oh'],
       description:
-        'Researcher at socius labs bridging cognitive science and machine intelligence.',
+        'Researcher at LSE and socius labs bridging cognitive science and machine intelligence.',
       email: 'mailto:nick.sh.oh@socius.org',
       knowsAbout: [
         'Cognitive science',

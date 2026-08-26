@@ -13,9 +13,9 @@ export const SITE = {
 export const ROUTES = [
   {
     path: '/',
-    title: 'Nick (Seungheon) Oh — Researcher @ socius labs',
+    title: 'Nick (Seungheon) Oh — Researcher @ LSE',
     description:
-      'Nick (Seungheon) Oh is a researcher at socius labs, borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
+      'Nick (Seungheon) Oh is a researcher at LSE and socius labs, borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
   },
   {
     path: '/publications',
@@ -41,6 +41,6 @@ export const ROUTES = [
     path: '/cv',
     title: 'CV — Nick (Seungheon) Oh',
     description:
-      'Curriculum vitae of Nick (Seungheon) Oh — researcher at socius labs bridging cognitive science and machine intelligence.',
+      'Curriculum vitae of Nick (Seungheon) Oh — researcher at LSE and socius labs bridging cognitive science and machine intelligence.',
   },
 ];

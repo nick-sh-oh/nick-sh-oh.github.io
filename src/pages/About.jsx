@@ -19,7 +19,7 @@ export default function About() {
         <div className="about-intro">
           <h1>Nick (Seungheon) Oh</h1>
           <p className="subtitle">
-            Researcher @ <a href="https://www.socius.org/">socius labs</a>
+            Visiting Researcher @ <a href="https://www.lse.ac.uk/cpnss">LSE</a>; Researcher @ <a href="https://www.socius.org/">socius labs</a>
           </p>
         </div>
         <img
