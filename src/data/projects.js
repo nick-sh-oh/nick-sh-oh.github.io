@@ -10,7 +10,6 @@ export const projects = [
       'Art Gallery at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Denver',
     year: 2026,
     image: '/img/artefacts-lenet1.jpg',
-    imageFull: '/img/artefacts-lenet1.png',
     imageAlt:
       'artefact(s): LeNet-1 — a transparent case of stacked circuit boards lit by a lattice of violet LEDs, on a white plinth in the CVPR 2026 Art Gallery, with a visitor walking past.',
     awards: [
@@ -45,7 +44,9 @@ export const projects = [
     label: 'Python library',
     title: 'RedditHarbor',
     media: {
-      src: '/img/redditharbor_demo.gif',
+      type: 'video',
+      src: '/video/redditharbor_demo.mp4',
+      poster: '/img/redditharbor_poster.jpg',
       alt: 'Animated terminal demo of RedditHarbor collecting Reddit submissions and comments into a database.',
     },
     description:

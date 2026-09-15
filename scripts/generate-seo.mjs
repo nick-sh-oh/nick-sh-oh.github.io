@@ -7,9 +7,10 @@
 // URL, Open Graph/Twitter tags, and JSON-LD. Also emits sitemap.xml.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SITE, ROUTES } from '../src/seo.js';
+import { SITE, ROUTES, REDIRECTS } from '../src/seo.js';
 import { publications } from '../src/data/publications.js';
 import { projects } from '../src/data/projects.js';
 import { teachingNotes } from '../src/data/teaching.js';
@@ -184,12 +185,52 @@ for (const route of ROUTES) {
   console.log(`generate-seo: wrote ${route.path === '/' ? '' : route.path.slice(1) + '/'}index.html`);
 }
 
+// Static redirect pages for retired URLs (not listed in the sitemap).
+for (const { from, to } of REDIRECTS) {
+  const target = canonicalOf(to);
+  const html = [
+    '<!doctype html>',
+    '<html lang="en">',
+    '  <head>',
+    '    <meta charset="utf-8" />',
+    `    <title>Redirecting to ${esc(target)}</title>`,
+    `    <link rel="canonical" href="${target}" />`,
+    `    <meta http-equiv="refresh" content="0; url=${target}" />`,
+    `    <script>location.replace(${JSON.stringify(target)});</script>`,
+    '  </head>',
+    '  <body>',
+    `    <p>This page has moved to <a href="${target}">${esc(target)}</a>.</p>`,
+    '  </body>',
+    '</html>',
+    '',
+  ].join('\n');
+  const outDir = join(dist, from.slice(1));
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, 'index.html'), html);
+  console.log(`generate-seo: wrote ${from.slice(1)}/index.html (redirect -> ${to})`);
+}
+
 const today = new Date().toISOString().slice(0, 10);
+
+// <lastmod> = date of the last commit touching the route's source files, so it
+// only moves when the content does (today if uncommitted changes or no git).
+// Needs full history in CI (deploy.yml checks out with fetch-depth: 0).
+function lastmodOf(route) {
+  const files = route.sources ?? [];
+  if (files.length === 0) return today;
+  const git = (args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
+  try {
+    if (git(['status', '--porcelain', '--', ...files])) return today;
+    return git(['log', '-1', '--format=%cs', '--', ...files]) || today;
+  } catch {
+    return today;
+  }
+}
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...ROUTES.map((r) =>
-    [`  <url>`, `    <loc>${canonicalOf(r.path)}</loc>`, `    <lastmod>${today}</lastmod>`, `  </url>`].join('\n')
+    [`  <url>`, `    <loc>${canonicalOf(r.path)}</loc>`, `    <lastmod>${lastmodOf(r)}</lastmod>`, `  </url>`].join('\n')
   ),
   '</urlset>',
   '',

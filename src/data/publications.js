@@ -14,6 +14,7 @@ export const publications = [
     links: {
       'arXiv': 'https://arxiv.org/abs/2608.05224',
       PDF: '/pdf/smallcogfm.pdf',
+      Poster: '/pdf/smallcogfm_poster.pdf',
       GitHub: 'https://github.com/socius-org/Centauri',
       'Hugging Face': 'https://huggingface.co/collections/socius/centauri',
     },

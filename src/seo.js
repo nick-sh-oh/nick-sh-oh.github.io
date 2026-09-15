@@ -2,35 +2,42 @@
 // Consumed by the app (RouteMeta updates document.title on navigation) and by
 // scripts/generate-seo.mjs (per-route static HTML, sitemap.xml) at build time.
 // Pure data only — this module is imported by both the browser bundle and Node.
+//
+// `sources` lists the repo files whose last commit dates the route's content
+// (used for sitemap <lastmod>).
 
 export const SITE = {
   origin: 'https://nick-sh-oh.github.io',
   name: 'Nick (Seungheon) Oh',
   twitter: '@nickshoh',
-  image: '/profile.jpg',
+  image: '/profile-og.jpg', // social-card size; the page itself loads the small /profile.jpg
 };
 
 export const ROUTES = [
   {
     path: '/',
+    sources: ['src/pages/About.jsx'],
     title: 'Nick (Seungheon) Oh — Researcher @ LSE',
     description:
       'Nick (Seungheon) Oh is a researcher at LSE and socius labs, borrowing from the sciences that explain humans to build better machines, and using machines to test human theories at impossible scales.',
   },
   {
     path: '/publications',
+    sources: ['src/data/publications.js', 'src/pages/Publications.jsx'],
     title: 'Publications — Nick (Seungheon) Oh',
     description:
       'Papers by Nick Oh at NeurIPS, ICML, COLM, AIES, and ICWSM — on metacognition in AI systems, post-hoc explainability, small foundation models of human cognition, privacy-by-design pipelines, and sentiment resources.',
   },
   {
     path: '/teaching',
+    sources: ['src/data/teaching.js', 'src/pages/Teaching.jsx'],
     title: 'Teaching — Nick (Seungheon) Oh',
     description:
       'Lecture notes by Nick Oh — including Introduction to Transformers and LLMs (with Steven Feng, Stanford), a self-contained mathematical account of attention and the decoder-only transformer, from token embeddings to next-token prediction.',
   },
   {
     path: '/projects',
+    sources: ['src/data/projects.js', 'src/pages/Projects.jsx'],
     title: 'Projects — Nick (Seungheon) Oh',
     description:
       'Projects by Nick Oh — artefact(s): LeNet-1, LeCun’s original CNN rebuilt in circuit boards and glass (CVPR 2026 Art Gallery, IEEE TCPAMI Art Award); Glyphs, a generative visual language of socius marks; and RedditHarbor, a Python library for ethical Reddit data collection.',
@@ -39,8 +46,13 @@ export const ROUTES = [
   },
   {
     path: '/cv',
+    sources: ['public/pdf/cv.pdf', 'src/pages/CV.jsx'],
     title: 'CV — Nick (Seungheon) Oh',
     description:
       'Curriculum vitae of Nick (Seungheon) Oh — researcher at LSE and socius labs bridging cognitive science and machine intelligence.',
   },
 ];
+
+// Retired URLs. Each gets a static redirect page (meta refresh + canonical) at
+// build time so crawlers and old links get the new page instead of a 404.
+export const REDIRECTS = [{ from: '/exhibitions', to: '/projects' }];

@@ -51,6 +51,16 @@ function SoftwareCard({ proj }) {
       <div className="proj-media">
         {proj.id === 'glyphs' ? (
           <GlyphLoop />
+        ) : proj.media.type === 'video' ? (
+          <video
+            src={proj.media.src}
+            poster={proj.media.poster}
+            aria-label={proj.media.alt}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
         ) : (
           <img src={proj.media.src} alt={proj.media.alt} loading="lazy" />
         )}
