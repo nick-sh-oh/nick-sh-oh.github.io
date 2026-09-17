@@ -377,11 +377,23 @@ h2 {
   line-height: 1.45;
   margin: 8px 0 0;
 }
-.pub-award {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
-  margin-top: 8px;
+/* ---------- Award pill (Oral / Spotlight / prizes) ---------- */
+:root {
+  --award-fill: #f5c542;
+}
+:root[data-theme='dark'] {
+  --award-fill: #f0b429;
+}
+.badge-award {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1c1c1e;
+  background: var(--award-fill);
+  border-radius: 4px;
+  padding: 3px 6px;
+  white-space: nowrap;
+  cursor: default;
 }
 .pub-links {
   display: flex;
@@ -479,22 +491,14 @@ h2 {
   margin-top: 36px;
 }
 .exhibit-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 12px;
 }
 .exhibit-title {
   margin: 0 0 6px;
-}
-.awards {
-  list-style: none;
-  margin: 12px 0 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.awards li {
-  font-size: 15px;
-  font-weight: 500;
 }
 .exhibit-figure {
   margin: 20px 0 0;

@@ -12,9 +12,13 @@ export const projects = [
     image: '/img/artefacts-lenet1.jpg',
     imageAlt:
       'artefact(s): LeNet-1 — a transparent case of stacked circuit boards lit by a lattice of violet LEDs, on a white plinth in the CVPR 2026 Art Gallery, with a visitor walking past.',
+    // `label` is the pill text; `note` is the full wording (tooltip + SEO).
     awards: [
-      'IEEE Computer Society Technical Community on Pattern Analysis and Machine Intelligence (TCPAMI) Art Award',
-      'Spotlight — one of 12 spotlighted works',
+      {
+        label: 'TCPAMI Art Award',
+        note: 'IEEE Computer Society Technical Community on Pattern Analysis and Machine Intelligence (TCPAMI) Art Award',
+      },
+      { label: 'Spotlight', note: 'One of 12 spotlighted works' },
     ],
     description:
       'Yann LeCun’s LeNet-1, rebuilt in a physical substrate of transparent circuit boards, LEDs, and glass. The installation runs live computation, exploring how an early convolutional network “thinks”.',

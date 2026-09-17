@@ -21,17 +21,15 @@ function Exhibition({ ex }) {
     <section className="exhibit">
       <div className="exhibit-meta">
         <span className="badge badge-exhibition">{ex.venue}</span>
+        {ex.awards?.map((award) => (
+          <span key={award.label} className="badge-award" title={award.note}>
+            ★ {award.label}
+          </span>
+        ))}
       </div>
       <h2 className="exhibit-title">{ex.title}</h2>
       <Creators creators={ex.creators} />
       <div className="pub-venue-full">{ex.venueFull}</div>
-      {ex.awards?.length > 0 && (
-        <ul className="awards">
-          {ex.awards.map((award) => (
-            <li key={award}>★ {award}</li>
-          ))}
-        </ul>
-      )}
       {ex.image && (
         <figure className="exhibit-figure">
           <a href={ex.imageFull ?? ex.image} target="_blank" rel="noopener noreferrer">

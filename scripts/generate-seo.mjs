@@ -127,7 +127,7 @@ function jsonLdFor(path) {
                 name: p.title,
                 creator: p.creators.map((name) => ({ '@type': 'Person', name })),
                 dateCreated: String(p.year),
-                award: p.awards,
+                award: p.awards?.map((a) => a.note ?? a.label),
                 image: p.image ? SITE.origin + p.image : undefined,
                 url: externalUrl(p),
               }

@@ -4,6 +4,17 @@ export const me = ['Nick Oh', 'Seungheon Oh'];
 
 export const publications = [
   {
+    id: 'discnets',
+    venue: "CogSys'26",
+    title: 'Discrimination Nets in Cognitive Science',
+    authors: ['Fernand Gobet', 'Dmitry Bennett', 'Nick Oh'],
+    venueFull: 'Thirteenth Annual Conference on Advances in Cognitive Systems (CogSys)',
+    year: 2026,
+    selected: true,
+    award: 'Oral',
+    links: {},
+  },
+  {
     id: 'smallfm',
     venue: "COLM'26",
     title: 'Small Foundation Models of Human Cognition and Behaviour',

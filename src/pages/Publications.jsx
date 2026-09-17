@@ -23,18 +23,17 @@ function PubEntry({ pub }) {
           {pub.venue}
         </span>
         <span className="badge-type">{isWorkshop ? 'Workshop' : 'Main track'}</span>
+        {pub.award && (
+          <span className="badge-award" title={pub.awardNote}>
+            ★ {pub.award}
+          </span>
+        )}
       </div>
       <div className="pub-body">
         <h3 className="pub-title">{pub.title}</h3>
         <Authors authors={pub.authors} />
         <div className="pub-venue-full">{pub.venueFull}</div>
         {pub.description && <p className="pub-desc">{pub.description}</p>}
-        {pub.award && (
-          <div className="pub-award" title={pub.awardNote}>
-            ★ {pub.award}
-            {pub.awardNote ? ` — ${pub.awardNote}` : ''}
-          </div>
-        )}
         <LinkPills links={pub.links} title={pub.title} />
       </div>
     </li>
