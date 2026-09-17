@@ -2,7 +2,28 @@ import { MailIcon, GitHubIcon, XIcon, LinkedInIcon, SubstackIcon } from '../comp
 import LinkPills from '../components/LinkPills.jsx';
 import { publications, me } from '../data/publications.js';
 
-const latest = publications.find((p) => p.id === 'smallfm');
+// Latest work, shown in this order. `media` is the image/video beside each entry.
+const latest = [
+  {
+    pub: publications.find((p) => p.id === 'smallfm'),
+    href: (p) => p.links.GitHub,
+    linkLabel: 'Centauri on GitHub',
+    media: {
+      type: 'video',
+      src: '/video/centauri.mp4',
+      poster: '/img/centauri_poster.jpg',
+      alt: 'Centauri — animated title card for Small Foundation Models of Human Cognition and Behaviour, styled as a classical painting of centaurs among Greek ruins.',
+    },
+  },
+  {
+    pub: publications.find((p) => p.id === 'discnets'),
+    media: {
+      type: 'image',
+      src: '/img/discrimination_network.jpg',
+      alt: 'A hand-drawn discrimination network: green and yellow nodes joined by arrows.',
+    },
+  },
+];
 
 const socials = [
   { label: 'Email', href: 'mailto:nick.sh.oh@socius.org', icon: MailIcon },
@@ -67,43 +88,66 @@ export default function About() {
 
       <section className="latest" aria-label="Latest work">
         <h2>Latest</h2>
-        <div className="latest-item">
-          <div className="latest-body">
-            <div className="latest-meta">
-              <span className="badge badge-conference">{latest.venue}</span>
-              <span className="badge-type">Main track</span>
-            </div>
-            <h3 className="pub-title">{latest.title}</h3>
-            <span className="authors">
-              {latest.authors.map((a, i) => (
-                <span key={a}>
-                  {me.includes(a) ? <strong>{a}</strong> : a}
-                  {i < latest.authors.length - 1 ? ', ' : ''}
+        {latest.map(({ pub, href, linkLabel, media }) => {
+          const isWorkshop = /workshop/i.test(pub.venueFull);
+          const mediaEl =
+            media.type === 'video' ? (
+              <video
+                className="latest-media"
+                src={media.src}
+                poster={media.poster}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label={media.alt}
+              />
+            ) : (
+              <img className="latest-media" src={media.src} alt={media.alt} loading="lazy" />
+            );
+          const url = href?.(pub);
+          return (
+            <div key={pub.id} className="latest-item">
+              <div className="latest-body">
+                <div className="latest-meta">
+                  <span className={`badge ${isWorkshop ? 'badge-workshop' : 'badge-conference'}`}>
+                    {pub.venue}
+                  </span>
+                  <span className="badge-type">{isWorkshop ? 'Workshop' : 'Main track'}</span>
+                  {pub.award && (
+                    <span className="badge-award" title={pub.awardNote}>
+                      ★ {pub.award}
+                    </span>
+                  )}
+                </div>
+                <h3 className="pub-title">{pub.title}</h3>
+                <span className="authors">
+                  {pub.authors.map((a, i) => (
+                    <span key={a}>
+                      {me.includes(a) ? <strong>{a}</strong> : a}
+                      {i < pub.authors.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
                 </span>
-              ))}
-            </span>
-            <LinkPills links={latest.links} title={latest.title} />
-          </div>
-          <a
-            className="latest-media-link"
-            href={latest.links.GitHub}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Centauri on GitHub"
-            title="Centauri on GitHub"
-          >
-            <video
-              className="latest-media"
-              src="/video/centauri.mp4"
-              poster="/img/centauri_poster.jpg"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Centauri — animated title card for Small Foundation Models of Human Cognition and Behaviour, styled as a classical painting of centaurs among Greek ruins."
-            />
-          </a>
-        </div>
+                <LinkPills links={pub.links} title={pub.title} />
+              </div>
+              {url ? (
+                <a
+                  className="latest-media-link"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={linkLabel}
+                  title={linkLabel}
+                >
+                  {mediaEl}
+                </a>
+              ) : (
+                <div className="latest-media-link">{mediaEl}</div>
+              )}
+            </div>
+          );
+        })}
       </section>
 
       <div className="socials">

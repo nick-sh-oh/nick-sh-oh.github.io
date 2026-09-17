@@ -235,6 +235,11 @@ h2 {
   align-items: center;
   gap: 28px;
 }
+.latest-item + .latest-item {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
 .latest-body {
   flex: 1;
   min-width: 0;
