@@ -42,7 +42,7 @@
 
 % ---- section machinery ----
 \newcommand{\secrule}{\par\needspace{48pt}\vspace{11pt}\noindent{\color{textcol}\rule{\textwidth}{0.75pt}}\par\vspace{10pt}\nopagebreak}
-% label-only row (EDUCATION, WORK EXPERIENCE)
+% label-only row (EDUCATION, PROFESSIONAL EXPERIENCE)
 \newcommand{\lblrow}[1]{\noindent\lbl{#1}\par\nopagebreak\vspace{8pt}}
 % two-column row: #1 label (letterspaced caps), #2 content
 \newcommand{\cvrow}[2]{\noindent\begin{minipage}[t]{\labelw}\raggedright\lbl{#1}\end{minipage}\hspace{\colgap}%
@@ -84,9 +84,9 @@ Distinction}
 \entry{BSc Government and Economics, London School of Economics and Political Science (LSE)}{London}\par\vspace{3pt}
 Upper Second Class Honours [Cumulative GPA: 3.5-7/4.0]}
 
-% ================= WORK EXPERIENCE =================
+% ================= PROFESSIONAL EXPERIENCE =================
 \secrule
-\lblrow{WORK EXPERIENCE}
+\lblrow{PROFESSIONAL EXPERIENCE}
 \daterow{Oct 2026 --- Present}{%
 \entry{Researcher, London School of Economics and Political Science (LSE)}{London}\par\vspace{3pt}
 Visiting researcher at CPNSS (Centre for Philosophy of Natural and Social Science), advised by Professor Fernand Gobet.}
@@ -108,7 +108,7 @@ Contributed to Knowsis research team extracting trading signals from non-traditi
 \cvrow{SELECTED\\PUBLICATIONS}{%
 \textbf{Oh, N.}, \& Gobet, F. (2026). Small Foundation Models of Human Cognition and Behaviour. \textit{The 3rd Conference on Language Modeling (\textbf{COLM'26})} \plink{https://arxiv.org/abs/2608.05224}{Paper}}
 \controw{%
-\textbf{Oh, N.}, \& Jin, H. (2026). Reliability, Faithfulness, and the Limits of Post-hoc Explanations of Opaque Scientific Models. \textit{Philosophy of Machine Learning Workshop @ the 43rd International Conference on Machine Learning (\textbf{PhilML Workshop, ICML'26})} \plink{https://arxiv.org/abs/2606.29346}{Paper}}
+Gobet, F., Bennett, D., \& \textbf{Oh, N.} (2026). Discrimination Nets in Cognitive Science. \textit{Thirteenth Annual Conference on Advances in Cognitive Systems (\textbf{CogSys'26; Oral})}}
 \controw{%
 \textbf{Oh, N.}, \& Gobet, F. (2025). Monitor-Generate-Verify (MGV): Formalising Metacognitive Theory for Language Model Reasoning. \textit{Workshop on Foundations of Reasoning in Language Models @ the 39th Annual Conference on Neural Information Processing Systems (\textbf{FoRLM Workshop, NeurIPS'25})} \plink{https://arxiv.org/abs/2511.04341}{Paper}}
 
@@ -116,7 +116,7 @@ Contributed to Knowsis research team extracting trading signals from non-traditi
 \newpage
 \secrule
 \cvrow{CONFERENCE\\PROCEEDINGS}{%
-\textbf{Oh, N.}, \& Gobet, F. (2026). Small Foundation Models of Human Cognition and Behaviour. \textit{The 3rd Conference on Language Modeling (\textbf{COLM'26})} \plink{https://arxiv.org/abs/2608.05224}{Paper}}
+\textbf{Oh, N.}, \& Gobet, F. (2026). Small Foundation Models of Human Cognition and Behaviour. \textit{The 3rd Conference on Language Modeling (\textbf{COLM'26})} \plink{https://arxiv.org/abs/2608.05224}{Paper} \plink{https://nick-sh-oh.github.io/pdf/smallcogfm_poster.pdf}{Poster}}
 \controw{%
 Gobet, F., Bennett, D., \& \textbf{Oh, N.} (2026). Discrimination Nets in Cognitive Science. \textit{Thirteenth Annual Conference on Advances in Cognitive Systems (\textbf{CogSys'26; Oral})}}
 \controw{%
@@ -140,15 +140,34 @@ Gobet, F., Bennett, D., \& \textbf{Oh, N.} (2026). Discrimination Nets in Cognit
 % ================= WORKING PAPERS =================
 \secrule
 \cvrow{WORKING PAPERS}{%
+Thinking Without Words: The Representational Geometry of Latent Reasoning Trajectories, with Cho, Y., Lee, M., Joo, S. \& Lee, A.
+\par\vspace{2pt}
+\textit{TL;DR: Tests whether purely latent chains of thought can sustain long-horizon reasoning by characterising the representational geometry of their trajectories.}
+\par\vspace{10pt}
+The Ideological Subspace of Large Language Models: Angular Steering of Political Representations, with Cho, Y. \& Gobet, F.
+\par\vspace{2pt}
+\textit{TL;DR: Locates an ideological subspace in LLMs, characterises its structure, and uses angular steering to shift models' political positions.}
+\par\vspace{10pt}
+Do Models of the Mind Converge? Representational Analysis of LLMs Fine-tuned on Human Behaviour, with Gobet, F.
+\par\vspace{2pt}
+\textit{TL;DR: Traces how representations in small foundation models of human cognition evolve with LoRA rank and data scale, and whether they converge across model sizes and families.}
+\par\vspace{10pt}
+Mapping the Architecture--Task Space of Neural Network Models of Human Behaviour
+\par\vspace{2pt}
+\textit{TL;DR: A survey charting which neural network architectures have been trained on which behavioural tasks.}
+\par\vspace{10pt}
 High-Intensity Ambivalence: Beyond Acceptance and Resistance to Generative AI in Occupational Communities (in review), with Humphrey, J. \& Ross, D.
-\par\vspace{10pt}
-Stochastic Optimal Control for Latent Reasoning in Large Language Models, with Cho, Y., Lee, M., Joo, S. \& Lee, A.
-\par\vspace{10pt}
-Application of Steering Vectors in Political Science, with Cho, Y. \& Gobet, F.}
+\par\vspace{2pt}
+\textit{TL;DR: Argues that occupational communities' responses to generative AI are better understood as high-intensity ambivalence than as acceptance or resistance.}}
 
 % ================= TEACHING & TUTORIALS =================
+\newpage
 \secrule
 \cvrow{TEACHING \& TUTORIALS}{%
+\textit{HAI101: Human x Artificial Intelligence} --- Lecture series @ LSE CPNSS (2026), organiser and speaker \plink{https://socialscience.ai}{Website}}
+\controw{%
+\textit{Introduction to Transformers and LLMs} --- Lecture note (2026), with Feng, S. \plink{https://nick-sh-oh.github.io/pdf/transformers_llms.pdf}{PDF}}
+\controw{%
 \textit{Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor} --- Tutorial @ ICWSM'24, co-organised with the Open Data Institute (ODI)}
 
 % ================= EXHIBITIONS =================
