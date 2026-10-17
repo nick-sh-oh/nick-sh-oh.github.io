@@ -5,10 +5,10 @@ export const teachingNotes = [
     type: 'Lecture note',
     title: 'Introduction to Transformers and LLMs',
     authors: ['Nick Oh', 'Steven Feng'],
-    affiliations: 'socius labs · Stanford University',
-    version: 'Draft v1.0',
-    date: 'August 2026',
-    dateISO: '2026-08-17',
+    affiliations: 'London School of Economics · Stanford University',
+    version: 'Draft v1.2',
+    date: 'October 2026',
+    dateISO: '2026-10-17',
     description:
       'A self-contained mathematical account of attention and the decoder-only transformer, the architecture at the heart of modern large language models. The note follows one forward pass of a trained model — from token embeddings to next-token prediction — guided by a single observation about matrix multiplication, and presumes little beyond elementary linear algebra and a first acquaintance with neural networks.',
     thumbnail: {
