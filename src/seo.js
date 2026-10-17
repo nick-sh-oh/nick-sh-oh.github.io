@@ -33,7 +33,7 @@ export const ROUTES = [
     sources: ['src/data/teaching.js', 'src/pages/Teaching.jsx'],
     title: 'Teaching — Nick (Seungheon) Oh',
     description:
-      'Lecture notes by Nick Oh — including Introduction to Transformers and LLMs (with Steven Feng, Stanford), a self-contained mathematical account of attention and the decoder-only transformer, from token embeddings to next-token prediction.',
+      'Teaching by Nick Oh — HAI101: Human x Artificial Intelligence, a lecture series at LSE on what machines can teach us about minds, and Introduction to Transformers and LLMs (with Steven Feng, Stanford), a self-contained mathematical account of attention and the decoder-only transformer.',
   },
   {
     path: '/projects',

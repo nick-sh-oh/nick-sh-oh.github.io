@@ -1,5 +1,24 @@
-// Lecture notes and teaching materials. Newest first.
+// Lecture notes, series and teaching materials. Newest first.
+// version (notes) or role (series) fills the second badge; the thumbnail opens links.PDF, else the first link.
 export const teachingNotes = [
+  {
+    id: 'hai101',
+    type: 'Lecture series',
+    title: 'HAI101 · Human x Artificial Intelligence',
+    authors: ['Nick Oh'],
+    role: 'Organiser',
+    affiliations: 'Centre for Philosophy of Natural and Social Science (CPNSS), London School of Economics',
+    date: 'October – November 2026',
+    dateISO: '2026-10-23',
+    description:
+      'A lecture series spanning the social, behavioural, cognitive sciences, philosophy, and AI, asking what machines can teach us about minds. Twelve speakers over three Fridays at LSE (23 October, 6 and 13 November 2026), from Stanford, MIT, Penn, UCL, Utrecht, Oxford, Groningen, Princeton, Yale and LSE, followed by an Industry Day.',
+    thumbnail: {
+      src: '/img/hai101_poster.jpg',
+      alt: 'HAI101 poster: a painted portrait in profile with numbers scattered through the hair, the title Human x Artificial Intelligence, the tagline, and the LSE mark.',
+      caption: 'socialscience.ai',
+    },
+    links: { Website: 'https://socialscience.ai/', Poster: '/pdf/hai101_poster.pdf' },
+  },
   {
     id: 'transformers-llms',
     type: 'Lecture note',

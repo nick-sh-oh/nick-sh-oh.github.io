@@ -16,12 +16,13 @@ function Authors({ authors }) {
 }
 
 function NoteEntry({ note }) {
+  const figHref = note.links.PDF || Object.values(note.links)[0];
   return (
     <li className="note">
       <div className="note-body">
         <div className="note-meta">
           <span className="badge badge-note">{note.type}</span>
-          <span className="badge-type">{note.version}</span>
+          <span className="badge-type">{note.version || note.role}</span>
           <span className="note-date">{note.date}</span>
         </div>
         <h3 className="note-title">{note.title}</h3>
@@ -32,10 +33,10 @@ function NoteEntry({ note }) {
       </div>
       <a
         className="note-fig"
-        href={note.links.PDF}
+        href={figHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Open ${note.title} (PDF)`}
+        aria-label={`Open ${note.title}${note.links.PDF ? ' (PDF)' : ''}`}
       >
         <img src={note.thumbnail.src} alt={note.thumbnail.alt} loading="lazy" />
         <span className="note-fig-caption">{note.thumbnail.caption}</span>
