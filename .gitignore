@@ -13,3 +13,7 @@ dist/
 cv/*.aux
 cv/*.log
 cv/*.out
+# two-page CV, kept local
+cv/cv-2page.*
+# PhD-application CV, kept local
+cv/cv-phd.*

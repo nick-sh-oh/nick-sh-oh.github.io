@@ -11,7 +11,7 @@ export default function CV() {
         </a>
       </div>
       <div className="pdf-frame">
-        <object data="/pdf/cv.pdf#view=FitH" type="application/pdf" width="100%" height="100%">
+        <object data="/pdf/cv.pdf#view=FitH&toolbar=0" type="application/pdf" width="100%" height="100%">
           <p>
             Your browser can’t display the embedded PDF.{' '}
             <a href="/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">

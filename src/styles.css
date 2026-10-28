@@ -695,10 +695,12 @@ h2 {
   height: 80vh;
   border-radius: 20px;
   overflow: hidden;
-  background: var(--soft);
+  background: #ffffff; /* the embedded PDF stays a white sheet in both themes */
+  color-scheme: light; /* Chromium hands this to the embedded PDF viewer, keeping its toolbar/backdrop light */
 }
 .pdf-frame object {
   display: block;
+  color-scheme: light;
 }
 .pdf-frame p {
   padding: 32px;
