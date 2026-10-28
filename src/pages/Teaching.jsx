@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { teachingNotes } from '../data/teaching.js';
 import { me } from '../data/publications.js';
-import LinkPills from '../components/LinkPills.jsx';
+import LinkPills, { Lightbox } from '../components/LinkPills.jsx';
+import { PlayIcon } from '../components/icons.jsx';
 
 function Authors({ authors }) {
   return (
@@ -12,6 +14,39 @@ function Authors({ authors }) {
         </span>
       ))}
     </span>
+  );
+}
+
+// Recorded talks for a series: a compact scrollable list; each row opens the
+// YouTube video in the lightbox.
+function Recordings({ note }) {
+  const [item, setItem] = useState(null);
+  return (
+    <div className="note-recordings">
+      <h4 className="note-recordings-title">Recordings</h4>
+      <ol className="note-recordings-list">
+        {note.recordings.map((r) => (
+          <li key={r.youtube}>
+            <button
+              type="button"
+              className="note-recording"
+              onClick={() => setItem({ kind: 'video', src: r.youtube, title: `${note.title} — ${r.title}` })}
+            >
+              <span className="note-recording-play" aria-hidden="true">
+                <PlayIcon />
+              </span>
+              <span className="note-recording-text">
+                <span className="note-recording-title">{r.title}</span>
+                <span className="note-recording-speaker">
+                  {me.includes(r.speaker) ? <strong>{r.speaker}</strong> : r.speaker}, {r.affiliation}
+                </span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ol>
+      {item && <Lightbox item={item} onClose={() => setItem(null)} />}
+    </div>
   );
 }
 
@@ -29,6 +64,7 @@ function NoteEntry({ note }) {
         <Authors authors={note.authors} />
         <div className="pub-venue-full">{note.affiliations}</div>
         <p className="pub-desc">{note.description}</p>
+        {note.recordings && <Recordings note={note} />}
         <LinkPills links={note.links} title={note.title} />
       </div>
       <a

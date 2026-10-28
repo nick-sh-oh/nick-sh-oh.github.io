@@ -23,7 +23,7 @@ const brandIcons = { GitHub: GitHubIcon, 'Hugging Face': HuggingFaceIcon };
 
 const youTubeId = (url) => url.match(/[?&]v=([\w-]+)/)?.[1] ?? url.split('/').pop();
 
-function Lightbox({ item, onClose }) {
+export function Lightbox({ item, onClose }) {
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);

@@ -1,5 +1,6 @@
 // Lecture notes, series and teaching materials. Newest first.
 // version (notes) or role (series) fills the second badge; the thumbnail opens links.PDF, else the first link.
+// recordings (optional) lists talk videos shown under the description.
 export const teachingNotes = [
   {
     id: 'hai101',
@@ -17,7 +18,18 @@ export const teachingNotes = [
       alt: 'HAI101 poster: a painted portrait in profile with numbers scattered through the hair, the title Human x Artificial Intelligence, the tagline, and the LSE mark.',
       caption: 'socialscience.ai',
     },
-    links: { Website: 'https://socialscience.ai/', Poster: '/pdf/hai101_poster.pdf' },
+    // Talks are listed in playlist order; each opens in the in-page lightbox.
+    recordings: [
+      { title: 'Introduction', speaker: 'Nick Oh', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=4U_yFlk5geQ' },
+      { title: 'The Developing Language Model', speaker: 'Steven Feng', affiliation: 'Stanford', youtube: 'https://www.youtube.com/watch?v=LXTPT4RUmGQ' },
+      { title: 'Neural Networks as Behavioural and Cognitive Proxy', speaker: 'Nick Oh', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=NSXFA57mYuM' },
+      { title: 'Impact of AI on Human Expertise', speaker: 'Fernand Gobet', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=YMdvng7ingY' },
+    ],
+    links: {
+      Website: 'https://socialscience.ai/',
+      Playlist: 'https://www.youtube.com/playlist?list=PLWM0TBrF7f4c',
+      Poster: '/pdf/hai101_poster.pdf',
+    },
   },
   {
     id: 'transformers-llms',
