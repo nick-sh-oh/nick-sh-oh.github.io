@@ -22,7 +22,7 @@ export const teachingNotes = [
     recordings: [
       { title: 'Introduction', speaker: 'Nick Oh', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=4U_yFlk5geQ' },
       { title: 'The Developing Language Model', speaker: 'Steven Feng', affiliation: 'Stanford', youtube: 'https://www.youtube.com/watch?v=LXTPT4RUmGQ' },
-      { title: 'Neural Networks as Behavioural and Cognitive Proxy', speaker: 'Nick Oh', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=NSXFA57mYuM' },
+      { title: 'Neural Networks as Behavioural and Cognitive Proxy', speaker: 'Nick Oh', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=M7qRWlmQDww' },
       { title: 'Impact of AI on Human Expertise', speaker: 'Fernand Gobet', affiliation: 'LSE', youtube: 'https://www.youtube.com/watch?v=YMdvng7ingY' },
     ],
     links: {
