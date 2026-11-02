@@ -12,7 +12,7 @@ export const teachingNotes = [
     date: 'October – November 2026',
     dateISO: '2026-10-23',
     description:
-      'A lecture series spanning the social, behavioural, cognitive sciences, philosophy, and AI, asking what machines can teach us about minds. Twelve speakers over three Fridays at LSE (23 October, 6 and 13 November 2026), from Stanford, MIT, Penn, UCL, Utrecht, Oxford, Groningen, Princeton, Yale and LSE, followed by an Industry Day.',
+      'A lecture series spanning the social, behavioural, cognitive sciences, philosophy, and AI, asking what machines can teach us about minds. Twelve speakers over three Fridays at LSE (23 October, 6 and 13 November 2026), from Stanford, MIT, Penn, UCL, Utrecht, Oxford, Groningen, Princeton, Yale and LSE, followed by an Industry Day on 27 November with speakers from MatrAIx, Emergent Science, Resemblance Inc., Artificial Societies and MIT.',
     thumbnail: {
       src: '/img/hai101_poster.jpg',
       alt: 'HAI101 poster: a painted portrait in profile with numbers scattered through the hair, the title Human x Artificial Intelligence, the tagline, and the LSE mark.',
