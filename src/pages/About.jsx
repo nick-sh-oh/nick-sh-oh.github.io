@@ -82,9 +82,10 @@ export default function About() {
           <strong>Research interests</strong>: I use neural networks of varying scales and
           architectures (from RNNs to LLMs) as cognitive proxies, both to understand cognition at
           the individual level and to test social-scientific theories at scales impossible with
-          human subjects. Increasingly, I’m drawn to their latent space: whether reasoning can
-          unfold there without ever surfacing as text, and whether we can measure, and even steer,
-          subjective “feelings” or “beliefs” in machines.
+          human subjects. Increasingly, I’m interested in the representations these models form
+          internally, and in what kind of evidence they provide. A neural network that reproduces a
+          human behaviour is not yet an explanation of it, so I care about when, and on what grounds,
+          an in-silico result licenses a claim about cognition or society.
         </p>
       </div>
 
