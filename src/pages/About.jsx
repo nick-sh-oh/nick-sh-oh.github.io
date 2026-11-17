@@ -70,9 +70,10 @@ export default function About() {
           <strong>A bit about myself</strong>: After studying Politics and Economics at{' '}
           <a href="https://www.lse.ac.uk/">LSE</a>, I worked as a Junior NLP Engineer at a
           London-based hedge fund while sketching out{' '}
-          <a href="https://www.socialscience.ai">socialscience.ai</a> (the domain now hosts{' '}
-          <Link to="/teaching">HAI101</Link>, a lecture series at LSE) — a side project to bring ML models
-          to social scientists. But building it revealed the more interesting question was
+          <a href="https://www.socialscience.ai">socialscience.ai</a>, a side project to bring ML
+          models to social scientists (the domain now hosts{' '}
+          <Link to="/teaching">HAI101</Link>, a lecture series at LSE). But building it revealed
+          the more interesting question was
           the reverse. Instead of AI/ML serving social science, what if the disciplines that
           studied humans could advance machine intelligence? That flip became{' '}
           <a href="https://socius.org">socius labs</a>, now an independent research lab supported by
