@@ -61,7 +61,7 @@ export default function About() {
         </p>
         <p>
           These days, I’m advised by{' '}
-          <a href="https://scholar.google.com/citations?user=jeJqwKsAAAAJ">
+          <a href="https://fernandgobet.com">
             Professor Fernand Gobet
           </a>
           , collaborating on bridging cognitive psychology and machine intelligence.
